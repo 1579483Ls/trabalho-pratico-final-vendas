@@ -16,6 +16,7 @@ Metodologia: Scrum com 4 sprints de 3-4 dias cada
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <locale.h>
 
 #define MAX_PRODUTOS 100
 #define MAX_STRING 100
@@ -93,6 +94,7 @@ void menu_produtos() {
 }
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
     printf("Módulo de Produtos - Lucas Siqueira\n");
     getchar();
     menu_produtos();
