@@ -27,13 +27,13 @@
 ## 📚 Funções a Implementar
 
 ### `int buscar_produto_por_codigo(int codigo)`
-**Status**:  
+**Status**: 
 **Descrição**: Busca produto pelo código  
 **Entrada**: Código do produto  
 **Saída**: Índice no array ou -1  
 
 ### `void cadastrar_produto()`
-**Status**:  
+**Status**: ✅ Implementado  
 **Descrição**: Cadastra novo produto  
 **Validações necessárias**:
 - Nome não pode ser vazio
@@ -42,7 +42,7 @@
 - Preço > 0
 
 ### `void consultar_produtos()`
-**Status**:   
+**Status**: ✅ Implementado   
 **Descrição**: Lista produtos ativos  
 **Formato**: Tabular com código, nome, estoque, preço
 
@@ -58,6 +58,15 @@
 **Confirmação**: Sim/Não
 
 ## ✅ Casos de Teste a Implementar
+
+### CT001 - Cadastrar Produto com Sucesso
+**Entrada**:
+- Nome: "Smartphone Samsung"
+- Código: Automático
+- Estoque: 15
+- Preço: 1200.00
+
+**Resultado Esperado**: Produto cadastrado com sucesso
 
 ## 📊 Relatório de Execução
 <!-- A ser preenchido durante a execução dos testes -->

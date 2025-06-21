@@ -78,10 +78,7 @@ void menu_produtos() {
 
         switch (opcao) {
             case 1: cadastrar_produto(); break;
-            case 2: 
-                printf("Consulta em desenvolvimento!\n");
-                pausar();
-                break;
+            case 2: consultar_produtos(); break;
             case 3: 
                 printf("Alteração em desenvolvimento!\n");
                 pausar();
@@ -152,6 +149,30 @@ void cadastrar_produto() {
     num_produtos++;
 
     printf("Produto cadastrado com sucesso! Código: %d\n", novo_produto.codigo);
+    pausar();
+}
+
+void consultar_produtos() {
+    printf("\n=== CONSULTAR PRODUTOS ===\n");
+    
+    if (num_produtos == 0) {
+        printf("Nenhum produto cadastrado.\n");
+        pausar();
+        return;
+    }
+
+    printf("%-6s %-30s %-10s %-12s\n", "Código", "Nome", "Estoque", "Preço");
+    printf("--------------------------------------------------------\n");
+    
+    for (int i = 0; i < num_produtos; i++) {
+        if (produtos[i].ativo) {
+            printf("%-6d %-30s %-10d R$ %-9.2f\n", 
+                   produtos[i].codigo, 
+                   produtos[i].nome, 
+                   produtos[i].quantidade_estoque, 
+                   produtos[i].preco_venda);
+        }
+    }
     pausar();
 }
 

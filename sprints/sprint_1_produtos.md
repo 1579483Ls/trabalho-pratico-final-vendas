@@ -1,7 +1,7 @@
 # Sprint 1 - Módulo de Produtos
 **Duração**: 3-4 dias  
 **Responsável**: Lucas Siqueira  
-**Data Início**: [A definir]  
+**Data Início**: 21/06/2025 
 **Data Fim**: [A definir]  
 
 ## 🎯 Objetivo da Sprint
