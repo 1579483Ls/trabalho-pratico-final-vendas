@@ -52,6 +52,15 @@ void pausar() {
     getchar();
 }
 
+int buscar_produto_por_codigo(int codigo) {
+    for (int i = 0; i < num_produtos; i++) {
+        if (produtos[i].codigo == codigo && produtos[i].ativo) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 void menu_produtos() {
     int opcao;
     
