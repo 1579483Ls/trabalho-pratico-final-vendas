@@ -9,8 +9,8 @@
 
 ### 1. Documentação das Funções
 - [ ] `buscar_produto_por_codigo()`
-- [ ] `cadastrar_produto()`
-- [ ] `consultar_produtos()`
+- [X] `cadastrar_produto()`
+- [X] `consultar_produtos()`
 - [ ] `alterar_produto()`
 - [ ] `excluir_produto()`
 
@@ -73,7 +73,7 @@
 
 | Caso de Teste | Status | Resultado | Observações |
 |---------------|--------|-----------|-------------|
-| CT001 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT001 | [X] | [X] Passou / [ ] Falhou | |
 | CT002 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT003 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT004 | [ ] | [ ] Passou / [ ] Falhou | |

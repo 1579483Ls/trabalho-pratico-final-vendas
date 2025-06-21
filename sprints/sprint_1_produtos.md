@@ -17,8 +17,8 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 
 ### Tarefas Técnicas
 - [ ] **T001**: Documentar assinatura da função `buscar_produto_por_codigo()`
-- [ ] **T002**: Documentar assinatura da função `cadastrar_produto()`
-- [ ] **T003**: Documentar assinatura da função `consultar_produtos()`
+- [X] **T002**: Documentar assinatura da função `cadastrar_produto()`
+- [X] **T003**: Documentar assinatura da função `consultar_produtos()`
 - [ ] **T004**: Documentar assinatura da função `alterar_produto()`
 - [ ] **T005**: Documentar assinatura da função `excluir_produto()`
 - [ ] **T006**: Implementar casos de sucesso para todas as funções
@@ -72,15 +72,15 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 **Procedimento**:
 1. Executar cadastrar_produto()
 2. Escolher opção 1 (código automático)
-3. Inserir nome: "Produto Teste 1"
-4. Inserir estoque: 10
-5. Inserir preço: 99.99
+3. Inserir nome: "Smartphone Samsung"
+4. Inserir estoque: 15
+5. Inserir preço: 1200.00
 
 **Entrada**:
-- Nome: "Produto Teste 1"
+- Nome: "Smartphone Samsung"
 - Código: Automático
-- Estoque: 10
-- Preço: 99.99
+- Estoque: 15
+- Preço: 1200.00
 
 **Saída Esperada**: 
 - Produto cadastrado com sucesso
@@ -238,7 +238,7 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
-| CT001 | Cadastrar Produto - Código Automático | [ ] | Passou/Falhou | | |
+| CT001 | Cadastrar Produto - Código Automático | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:57] |
 | CT002 | Cadastrar Produto - Código Manual | [ ] | Passou/Falhou | | |
 | CT003 | Código Duplicado | [ ] | Passou/Falhou | | |
 | CT004 | Buscar Produto Existente | [ ] | Passou/Falhou | | |
@@ -264,7 +264,7 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 <!-- Documentar problemas encontrados durante os testes -->
 
 ## ✅ Definition of Done
-- [] Todas as funções implementadas
+- [ ] Todas as funções implementadas
 - [ ] Documentação completa
 - [ ] Casos de teste definidos
 - [ ] Todos os testes executados

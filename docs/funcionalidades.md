@@ -9,9 +9,15 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 
 ### Produto
 ```c
+typedef struct {
+    char nome[MAX_STRING];        // Nome do produto
+    int codigo;                   // Código único do produto
+    int quantidade_estoque;       // Quantidade disponível
+    float preco_venda;           // Preço unitário de venda
+    int ativo;                   // Status (1=ativo, 0=removido)
+} Produto;
 
 ```
-
 ### Vendedor
 ```c
 
@@ -41,9 +47,35 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 
 ## 📦 Módulo de Produtos (Lucas)
 
+### `void cadastrar_produto()`
+**Propósito**: Adiciona um novo produto ao sistema  
 
+**Parâmetros de Entrada**: Nome do produto, código automatico ou manual do produto, quantidade em estoque, preço de venda.
+
+**Parâmetros de Saída**: (Código já existe! Digite outro código) caso já exista o código e (Produto cadastrado com sucesso!) caso tudo esteja ok.
+
+**Funcionalidades**:
+- Geração automática ou manual de código
+- Validação de duplicidade
+- Validação de dados obrigatórios
+
+**Responsabilidade**: Lucas
 
 ---
+
+### `void consultar_produtos()`
+**Propósito**: Exibe lista de produtos ativos 
+
+**Parâmetros de Entrada**: Código de produto.
+
+**Parâmetros de Saída**: (Código, Nome, Estoque, Preço) se o produto estiver ativo e (Nenhum produto cadastrado) caso o código de produto não seja ativo.
+
+**Funcionalidades**:
+- Formato tabular
+- Apenas produtos ativos
+- Tratamento de lista vazia
+
+**Responsabilidade**: Lucas
 
 ## 👥 Módulo de Vendedores (Daniel)
 
@@ -71,13 +103,21 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 
 ## 🛠️ Funções Auxiliares do Sistema
 
+### `void limpar_buffer()`
+**Propósito**: Remove caracteres residuais do buffer de entrada  
+**Parâmetros de Entrada**: Nenhum
+**Parâmetros de Saída**: Nenhum
 
+### `void pausar()`
+**Propósito**: Pausa a execução aguardando entrada do usuário  
+**Parâmetros de Entrada**: Nenhum
+**Parâmetros de Saída**: Nenhum
 
 ---
 
 ## 📊 Constantes do Sistema
-- 
-- 
+- `MAX_PRODUTOS`: 100
+- `MAX_STRING`: 100
 - 
 - 
 - 
