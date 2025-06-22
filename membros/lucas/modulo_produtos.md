@@ -11,7 +11,7 @@
 - [ ] `buscar_produto_por_codigo()`
 - [X] `cadastrar_produto()`
 - [X] `consultar_produtos()`
-- [ ] `alterar_produto()`
+- [x] `alterar_produto()`
 - [ ] `excluir_produto()`
 
 ### 2. Implementação
@@ -47,7 +47,7 @@
 **Formato**: Tabular com código, nome, estoque, preço
 
 ### `void alterar_produto()`
-**Status**:  
+**Status**: ✅ Implementado  
 **Descrição**: Altera dados do produto  
 **Permite alterar**: Nome, estoque, preço  
 **Não permite**: Código
@@ -57,24 +57,13 @@
 **Descrição**: Remove produto (exclusão lógica)  
 **Confirmação**: Sim/Não
 
-## ✅ Casos de Teste a Implementar
-
-### CT001 - Cadastrar Produto com Sucesso
-**Entrada**:
-- Nome: "Smartphone Samsung"
-- Código: Automático
-- Estoque: 15
-- Preço: 1200.00
-
-**Resultado Esperado**: Produto cadastrado com sucesso
-
 ## 📊 Relatório de Execução
 <!-- A ser preenchido durante a execução dos testes -->
 
 | Caso de Teste | Status | Resultado | Observações |
 |---------------|--------|-----------|-------------|
 | CT001 | [X] | [X] Passou / [ ] Falhou | |
-| CT002 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT002 | [x] | [x] Passou / [ ] Falhou | |
 | CT003 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT004 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT005 | [ ] | [ ] Passou / [ ] Falhou | |
