@@ -79,10 +79,7 @@ void menu_produtos() {
         switch (opcao) {
             case 1: cadastrar_produto(); break;
             case 2: consultar_produtos(); break;
-            case 3: 
-                printf("Alteração em desenvolvimento!\n");
-                pausar();
-                break;
+            case 3: alterar_produto(); break;
             case 4: 
                 printf("Exclusão em desenvolvimento!\n");
                 pausar();
@@ -173,6 +170,57 @@ void consultar_produtos() {
                    produtos[i].preco_venda);
         }
     }
+    pausar();
+}
+
+void alterar_produto() {
+    int codigo, indice;
+    
+    printf("\n=== ALTERAR PRODUTO ===\n");
+    printf("Digite o código do produto: ");
+    scanf("%d", &codigo);
+    limpar_buffer();
+
+    indice = buscar_produto_por_codigo(codigo);
+    if (indice == -1) {
+        printf("Produto não encontrado!\n");
+        pausar();
+        return;
+    }
+
+    printf("Produto encontrado: %s\n", produtos[indice].nome);
+    printf("1 - Alterar nome\n");
+    printf("2 - Alterar quantidade em estoque\n");
+    printf("3 - Alterar preço de venda\n");
+    printf("Escolha: ");
+    
+    int opcao;
+    scanf("%d", &opcao);
+    limpar_buffer();
+
+    switch (opcao) {
+        case 1:
+            printf("Novo nome: ");
+            fgets(produtos[indice].nome, MAX_STRING, stdin);
+            produtos[indice].nome[strcspn(produtos[indice].nome, "\n")] = 0;
+            break;
+        case 2:
+            printf("Nova quantidade: ");
+            scanf("%d", &produtos[indice].quantidade_estoque);
+            limpar_buffer();
+            break;
+        case 3:
+            printf("Novo preço: R$ ");
+            scanf("%f", &produtos[indice].preco_venda);
+            limpar_buffer();
+            break;
+        default:
+            printf("Opção inválida!\n");
+            pausar();
+            return;
+    }
+
+    printf("Produto alterado com sucesso!\n");
     pausar();
 }
 
