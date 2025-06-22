@@ -19,7 +19,7 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 - [ ] **T001**: Documentar assinatura da função `buscar_produto_por_codigo()`
 - [X] **T002**: Documentar assinatura da função `cadastrar_produto()`
 - [X] **T003**: Documentar assinatura da função `consultar_produtos()`
-- [ ] **T004**: Documentar assinatura da função `alterar_produto()`
+- [x] **T004**: Documentar assinatura da função `alterar_produto()`
 - [ ] **T005**: Documentar assinatura da função `excluir_produto()`
 - [ ] **T006**: Implementar casos de sucesso para todas as funções
 - [ ] **T007**: Definir casos de teste para o módulo
