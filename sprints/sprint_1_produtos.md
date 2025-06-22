@@ -240,7 +240,7 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
 | CT001 | Cadastrar Produto - Código Automático | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:57] |
-| CT002 | Cadastrar Produto - Código Manual | [ ] | Passou/Falhou | | |
+| CT002 | Cadastrar Produto - Código Automático | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:40] |
 | CT003 | Código Duplicado | [ ] | Passou/Falhou | | |
 | CT004 | Buscar Produto Existente | [ ] | Passou/Falhou | | |
 | CT005 | Buscar Produto Inexistente | [ ] | Passou/Falhou | | |
@@ -256,10 +256,10 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 
 ## 📈 Métricas da Sprint
 - **Total de Casos de Teste**: 14
-- **Casos Executados**: [A preencher]
-- **Casos que Passaram**: [A preencher]
-- **Casos que Falharam**: [A preencher]
-- **Taxa de Sucesso**: [A preencher]%
+- **Casos Executados**: [2]
+- **Casos que Passaram**: [2]
+- **Casos que Falharam**: [0]
+- **Taxa de Sucesso**: [100%]
 
 ## 🐛 Bugs Encontrados
 <!-- Documentar problemas encontrados durante os testes -->
