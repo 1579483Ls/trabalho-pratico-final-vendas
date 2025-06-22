@@ -92,17 +92,18 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 **Procedimento**:
 1. Executar cadastrar_produto()
 2. Escolher opção 2 (código manual)
-3. Inserir código: 100
-4. Inserir dados restantes
+3. Inserir nome: Mouse Wireless Logitech
+4. Inserir estoque: 50
+5. Inserir preço: 89,90
 
 **Entrada**:
-- Nome: "Produto Teste 2"
+- Nome: "Mouse Wireless Logitech"
 - Código: 100
-- Estoque: 20
-- Preço: 150.00
+- Estoque: 50
+- Preço: 89,90
 
 **Saída Esperada**: 
-- Produto cadastrado com código 100
+- Produto cadastrado com sucesso! Código: 100
 - proximo_codigo_produto atualizado para 101
 
 ### CT003 - Tentar Cadastrar com Código Duplicado
