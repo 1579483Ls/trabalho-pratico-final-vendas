@@ -77,6 +77,26 @@ typedef struct {
 
 **Responsabilidade**: Lucas
 
+---
+
+### `void alterar_produto()`
+**Propósito**: Modifica dados de um produto existente 
+
+**Parâmetros de Entrada**: Solicita código do produto ao usuário.
+
+**Parâmetros de Saída**: (Produto não encontrado!) caso o codigo não for ativo, (Produto encontrado!) caso seja um codigo ativo, e suas opções de alteração:
+    1 - Alterar nome;
+    2 - Alterar quantidade em estoque;
+    3 - Alterar preço de venda;
+    Escolha.
+
+**Funcionalidades**:
+- Busca por código
+- Alteração seletiva de campos
+- Validação de existência
+
+**Responsabilidade**: Lucas
+
 ## 👥 Módulo de Vendedores (Daniel)
 
 
