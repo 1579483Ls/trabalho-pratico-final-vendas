@@ -284,6 +284,61 @@ void excluir_produto() {
     pausar();
 }
 
+void cadastrar_vendedor() {
+    // Verificar se há espaço disponível no array
+    if (num_vendedores >= MAX_VENDEDORES) {
+        printf("Limite máximo de vendedores atingido!\n");
+        pausar();
+        return;
+    }
+
+    Vendedor novo_vendedor;
+    int opcao_numero;
+
+    printf("\n=== CADASTRAR VENDEDOR ===\n");
+    
+    printf("Nome do vendedor: ");
+    fgets(novo_vendedor.nome, MAX_STRING, stdin);
+    novo_vendedor.nome[strcspn(novo_vendedor.nome, "\n")] = 0;
+
+    printf("Número do vendedor:\n");
+    printf("1 - Gerar automaticamente (%d)\n", proximo_numero_vendedor);
+    printf("2 - Inserir manualmente\n");
+    printf("Escolha: ");
+    scanf("%d", &opcao_numero);
+    limpar_buffer();
+
+    if (opcao_numero == 1) {
+        novo_vendedor.numero = proximo_numero_vendedor++;
+    } else {
+        do {
+            printf("Digite o número: ");
+            scanf("%d", &novo_vendedor.numero);
+            limpar_buffer();
+            
+            if (buscar_vendedor_por_numero(novo_vendedor.numero) != -1) {
+                printf("Número já existe! Digite outro número.\n");
+            }
+        } while (buscar_vendedor_por_numero(novo_vendedor.numero) != -1);
+        
+        if (novo_vendedor.numero >= proximo_numero_vendedor) {
+            proximo_numero_vendedor = novo_vendedor.numero + 1;
+        }
+    }
+
+    printf("Salário fixo: R$ ");
+    scanf("%f", &novo_vendedor.salario_fixo);
+    limpar_buffer();
+
+    novo_vendedor.comissoes = 0.0;
+    novo_vendedor.ativo = 1;
+    vendedores[num_vendedores] = novo_vendedor;
+    num_vendedores++;
+
+    printf("Vendedor cadastrado com sucesso! Número: %d\n", novo_vendedor.numero);
+    pausar();
+}
+
 int main() {
     setlocale(LC_ALL, "Portuguese");
     
