@@ -20,6 +20,7 @@ Metodologia: Scrum com 4 sprints de 3-4 dias cada
 
 #define MAX_PRODUTOS 100
 #define MAX_STRING 100
+#define MAX_VENDEDORES 50
 
 typedef struct {
     char nome[MAX_STRING];
@@ -29,16 +30,36 @@ typedef struct {
     int ativo;
 } Produto;
 
+typedef struct {
+    char nome[MAX_STRING];       
+    int numero;                  
+    float salario_fixo;         
+    float comissoes;            
+    int ativo;                  
+} Vendedor;
+
 Produto produtos[MAX_PRODUTOS];
+Vendedor vendedores[MAX_VENDEDORES];
 int num_produtos = 0;
+int num_vendedores = 0;
 int proximo_codigo_produto = 1;
+int proximo_numero_vendedor = 1;
 
 void cadastrar_produto();
 void consultar_produtos();
 void alterar_produto();
 void excluir_produto();
 int buscar_produto_por_codigo(int codigo);
+
+void cadastrar_vendedor();                     // Cadastra novo vendedor
+void consultar_vendedores();                   // Lista todos os vendedores
+void alterar_vendedor();                       // Modifica dados de vendedor existente
+void excluir_vendedor();                       // Remove vendedor (exclusão lógica)
+int buscar_vendedor_por_numero(int numero);
+void menu_vendedores();
+
 void menu_produtos();
+
 void limpar_buffer();
 void pausar();
 
@@ -59,6 +80,15 @@ int buscar_produto_por_codigo(int codigo) {
         }
     }
     return -1;
+}
+
+int buscar_vendedor_por_numero(int numero) {
+    for (int i = 0; i < num_vendedores; i++) {
+        if (vendedores[i].numero == numero && vendedores[i].ativo) {
+            return i;  // Vendedor encontrado e ativo
+        }
+    }
+    return -1;  // Vendedor não encontrado ou inativo
 }
 
 void menu_produtos() {
@@ -270,3 +300,4 @@ int main() {
     printf("\nObrigado por usar o sistema!\n");
     return 0;
 }
+
