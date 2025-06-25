@@ -285,7 +285,6 @@ void excluir_produto() {
 }
 
 void cadastrar_vendedor() {
-    // Verificar se há espaço disponível no array
     if (num_vendedores >= MAX_VENDEDORES) {
         printf("Limite máximo de vendedores atingido!\n");
         pausar();
@@ -336,6 +335,30 @@ void cadastrar_vendedor() {
     num_vendedores++;
 
     printf("Vendedor cadastrado com sucesso! Número: %d\n", novo_vendedor.numero);
+    pausar();
+}
+
+void consultar_vendedores() {
+    printf("\n=== CONSULTAR VENDEDORES ===\n");
+    
+    if (num_vendedores == 0) {
+        printf("Nenhum vendedor cadastrado.\n");
+        pausar();
+        return;
+    }
+
+    printf("%-6s %-30s %-15s %-15s\n", "Número", "Nome", "Salário Fixo", "Comissões");
+    printf("--------------------------------------------------------------------\n");
+    
+    for (int i = 0; i < num_vendedores; i++) {
+        if (vendedores[i].ativo) {
+            printf("%-6d %-30s R$ %-12.2f R$ %-12.2f\n", 
+                   vendedores[i].numero, 
+                   vendedores[i].nome, 
+                   vendedores[i].salario_fixo, 
+                   vendedores[i].comissoes);
+        }
+    }
     pausar();
 }
 

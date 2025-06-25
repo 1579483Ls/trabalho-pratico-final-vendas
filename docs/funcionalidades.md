@@ -9,12 +9,24 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 
 ### Produto
 ```c
+typedef struct {
+    char nome[MAX_STRING];        // Nome do produto
+    int codigo;                   // Código único do produto
+    int quantidade_estoque;       // Quantidade disponível
+    float preco_venda;           // Preço unitário de venda
+    int ativo;                   // Status (1=ativo, 0=removido)
+} Produto;
 
 ```
-
 ### Vendedor
 ```c
-
+typedef struct {
+    char nome[MAX_STRING];        // Nome do vendedor
+    int numero;                   // Número único do vendedor
+    float salario_fixo;          // Salário base
+    float comissoes;             // Comissões acumuladas
+    int ativo;                   // Status (1=ativo, 0=removido)
+} Vendedor;
 ```
 
 ### Endereco
@@ -41,13 +53,118 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 
 ## 📦 Módulo de Produtos (Lucas)
 
+### `int buscar_produto_por_codigo(int codigo)`
+**Propósito**: Localiza um produto pelo código  
 
+**Parâmetros de Entrada**: 
+- `codigo`: Código do produto a ser buscado
+
+**Parâmetros de Saída**: 
+- Retorna o índice do produto no array ou -1 se não encontrado (Produto não encontrado!)
+
+**Responsabilidade**: Lucas
+
+---
+
+### `void cadastrar_produto()`
+**Propósito**: Adiciona um novo produto ao sistema  
+
+**Parâmetros de Entrada**: Nome do produto, código automatico ou manual do produto, quantidade em estoque, preço de venda.
+
+**Parâmetros de Saída**: (Código já existe! Digite outro código) caso já exista o código e (Produto cadastrado com sucesso!) caso tudo esteja ok.
+
+**Funcionalidades**:
+- Geração automática ou manual de código
+- Validação de duplicidade
+- Validação de dados obrigatórios
+
+**Responsabilidade**: Lucas
+
+---
+
+### `void consultar_produtos()`
+**Propósito**: Exibe lista de produtos ativos 
+
+**Parâmetros de Entrada**: Código de produto.
+
+**Parâmetros de Saída**: (Código, Nome, Estoque, Preço) se o produto estiver ativo e (Nenhum produto cadastrado) caso o código de produto não seja ativo.
+
+**Funcionalidades**:
+- Formato tabular
+- Apenas produtos ativos
+- Tratamento de lista vazia
+
+**Responsabilidade**: Lucas
+
+---
+
+### `void alterar_produto()`
+**Propósito**: Modifica dados de um produto existente 
+
+**Parâmetros de Entrada**: Solicita código do produto ao usuário.
+
+**Parâmetros de Saída**: (Produto não encontrado!) caso o codigo não for ativo, (Produto encontrado!) caso seja um codigo ativo, e suas opções de alteração:
+    1 - Alterar nome;
+    2 - Alterar quantidade em estoque;
+    3 - Alterar preço de venda;
+    Escolha.
+
+**Funcionalidades**:
+- Busca por código
+- Alteração seletiva de campos
+- Validação de existência
+
+**Responsabilidade**: Lucas
+
+### `void excluir_produto()`
+**Propósito**: Remove um produto do sistema (exclusão lógica)
+
+**Parâmetros de Entrada**: Solicita código do produto ao usuário.
+
+**Parâmetros de Saída**: (Produto não encontrado!) caso não seja um codigo ativo, mensagem de confirmação de exclusão (Confirma exclusão? (s/n):), (Produto excluído com sucesso!) caso selecione a opção (s) e caso a opção (n) (Exclusão cancelada).
+
+**Funcionalidades**:
+- Busca por código
+- Confirmação de exclusão
+- Exclusão lógica (ativo = 0)
+
+**Responsabilidade**: Lucas
 
 ---
 
 ## 👥 Módulo de Vendedores (Daniel)
 
+### `void consultar_vendedores()`
+**Propósito**: Exibe lista de vendedores ativos  
+**Parâmetros de Entrada**: Nenhum
+**Parâmetros de Saída**: Nenhum
+**Funcionalidades**:
+- Formato tabular com número, nome, salário e comissões
+- Apenas vendedores ativos
+**Responsabilidade**: Daniel
 
+### `int buscar_vendedor_por_numero(int numero)`
+**Propósito**: Localiza um vendedor pelo número  
+**Parâmetros de Entrada**: 
+- `numero`: Número do vendedor a ser buscado
+**Parâmetros de Saída**: 
+- Retorna o índice do vendedor no array ou -1 se não encontrado
+**Responsabilidade**: Daniel
+
+
+### `void cadastrar_vendedor()`
+**Propósito**: Adiciona um novo vendedor ao sistema 
+
+**Parâmetros de Entrada**:("Nome do vendedor: "), código automatico ou manual do vendedor, ("Salário fixo: R$ "), 
+
+**Parâmetros de Saída**: ("Vendedor cadastrado com sucesso! Número:), ("Número já existe! Digite outro número.\n")
+
+**Funcionalidades**:
+- Geração automática ou manual de número
+- Validação de duplicidade
+- Inicialização de comissões em 0
+
+**Responsabilidade**: Daniel
 
 ---
 
@@ -71,14 +188,22 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 
 ## 🛠️ Funções Auxiliares do Sistema
 
+### `void limpar_buffer()`
+**Propósito**: Remove caracteres residuais do buffer de entrada  
+**Parâmetros de Entrada**: Nenhum
+**Parâmetros de Saída**: Nenhum
 
+### `void pausar()`
+**Propósito**: Pausa a execução aguardando entrada do usuário  
+**Parâmetros de Entrada**: Nenhum
+**Parâmetros de Saída**: Nenhum
 
 ---
 
 ## 📊 Constantes do Sistema
-- 
-- 
-- 
+- `MAX_PRODUTOS`: 100
+- `MAX_STRING`: 100
+- `MAX_VENDEDORES` 50
 - 
 - 
 - 

@@ -230,13 +230,13 @@ Implementar e testar os módulos de gerenciamento de vendedores e compradores, c
 
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
-| VT001 | Cadastrar Automático | [ ] | Passou/Falhou | | |
-| VT002 | Cadastrar Manual | [ ] | Passou/Falhou | | |
-| VT003 | Número Duplicado | [ ] | Passou/Falhou | | |
-| VT004 | Salário Inválido | [ ] | Passou/Falhou | | |
-| VT005 | Buscar Existente | [ ] | Passou/Falhou | | |
-| VT006 | Buscar Inexistente | [ ] | Passou/Falhou | | |
-| VT007 | Lista Vazia | [ ] | Passou/Falhou | | |
+| VT001 | Cadastrar Automático |[X]| Passou/Falhou [PASSOU] | [24/06 - 17:47] |
+| VT002 | Cadastrar Manual |[X]| Passou/Falhou [PASSOU] | [25/06 -10:21] |
+| VT003 | Número Duplicado |[X]| Passou/Falhou [PASSOU] | [25/06 -10:50] |
+| VT004 | Salário Inválido |[X]| Passou/Falhou [PASSOU] | [25/06 -11:17] |
+| VT005 | Buscar Existente |[X]| Passou/Falhou [PASSOU] | [25/06 -11:55] |
+| VT006 | Buscar Inexistente |[X]| Passou/Falhou [PASSOU] | [25/06 -12:21] |
+| VT007 | Lista Vazia |[X]| Passou/Falhou [PASSOU] | [25/06 -13:02] |
 | VT008 | Lista Preenchida | [ ] | Passou/Falhou | | |
 | VT009 | Alterar Nome | [ ] | Passou/Falhou | | |
 | VT010 | Alterar Salário | [ ] | Passou/Falhou | | |
@@ -264,8 +264,8 @@ Implementar e testar os módulos de gerenciamento de vendedores e compradores, c
 ## 📈 Métricas da Sprint
 ### Vendedores (Daniel)
 - **Total de Casos**: 12
-- **Executados**: [A preencher]
-- **Sucesso**: [A preencher]%
+- **Executados**: [1]
+- **Sucesso**: [100%]
 
 ### Compradores (Guilherme)
 - **Total de Casos**: 12
