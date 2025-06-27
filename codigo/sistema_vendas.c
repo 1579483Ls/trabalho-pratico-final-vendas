@@ -67,6 +67,7 @@ int proximo_codigo_produto = 1;
 int proximo_numero_vendedor = 1;
 
 void cadastrar_comprador();
+int buscar_comprador_por_cpf(char *cpf);
 
 void cadastrar_produto();
 void consultar_produtos();
@@ -549,6 +550,17 @@ void cadastrar_comprador() {
     salvar_compradores();
     pausar();
 }
+
+int buscar_comprador_por_cpf(char *cpf) {
+    for (int i = 0; i < num_compradores; i++) {
+        if (strcmp(compradores[i].cpf, cpf) == 0 && compradores[i].ativo) {
+            return i;  // Comprador encontrado e ativo
+        }
+    }
+    return -1;  // Comprador não encontrado ou inativo
+}
+
+
 
 
 int main() {
