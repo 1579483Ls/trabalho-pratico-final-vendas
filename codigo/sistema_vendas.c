@@ -338,6 +338,35 @@ void cadastrar_vendedor() {
     pausar();
 }
 
+void menu_vendas() {
+    int opcao;
+    
+    do {
+        system("cls");  // Limpar tela (Windows)
+        printf("=== MENU VENDAS ===\n");
+        printf("1 - Cadastrar venda\n");      // GUSTAVO: Integração completa
+        printf("2 - Consultar vendas\n");     // GUSTAVO: Relatórios
+        printf("3 - Alterar venda\n");        // GUSTAVO: Alteração
+        printf("4 - Excluir venda\n");        // GUSTAVO: Exclusão com reversão
+        printf("0 - Voltar ao menu principal\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+        limpar_buffer();
+
+        switch (opcao) {
+            case 1: cadastrar_venda(); break;
+            case 2: consultar_vendas(); break;
+            case 3: alterar_venda(); break;
+            case 4: excluir_venda(); break;
+            case 0: break;
+            default: 
+                printf("Opção inválida!\n");
+                pausar();
+                break;
+        }
+    } while (opcao != 0);
+}
+
 void consultar_vendedores() {
     printf("\n=== CONSULTAR VENDEDORES ===\n");
     
@@ -362,13 +391,88 @@ void consultar_vendedores() {
     pausar();
 }
 
+void alterar_vendedor() {
+    int numero, indice;
+    
+    printf("\n=== ALTERAR VENDEDOR ===\n");
+    printf("Digite o número do vendedor: ");
+    scanf("%d", &numero);
+    limpar_buffer();
+
+    indice = buscar_vendedor_por_numero(numero);
+    if (indice == -1) {
+        printf("Vendedor não encontrado!\n");
+        pausar();
+        return;
+    }
+
+    printf("Vendedor encontrado: %s\n", vendedores[indice].nome);
+    printf("1 - Alterar nome\n");
+    printf("2 - Alterar salário fixo\n");
+    printf("Escolha: ");
+    
+    int opcao;
+    scanf("%d", &opcao);
+    limpar_buffer();
+
+    switch (opcao) {
+        case 1:
+            printf("Novo nome: ");
+            fgets(vendedores[indice].nome, MAX_STRING, stdin);
+            vendedores[indice].nome[strcspn(vendedores[indice].nome, "\n")] = 0;
+            break;
+        case 2:
+            printf("Novo salário: R$ ");
+            scanf("%f", &vendedores[indice].salario_fixo);
+            limpar_buffer();
+            break;
+        default:
+            printf("Opção inválida!\n");
+            pausar();
+            return;
+    }
+
+    printf("Vendedor alterado com sucesso!\n");
+    pausar();
+}
+
+void excluir_vendedor() {
+    int numero, indice;
+    
+    printf("\n=== EXCLUIR VENDEDOR ===\n");
+    printf("Digite o número do vendedor: ");
+    scanf("%d", &numero);
+    limpar_buffer();
+
+    indice = buscar_vendedor_por_numero(numero);
+    if (indice == -1) {
+        printf("Vendedor não encontrado!\n");
+        pausar();
+        return;
+    }
+
+    printf("Vendedor: %s\n", vendedores[indice].nome);
+    printf("Confirma exclusão? (s/n): ");
+    
+    char confirmacao;
+    scanf("%c", &confirmacao);
+    limpar_buffer();
+
+    if (tolower(confirmacao) == 's') {
+        vendedores[indice].ativo = 0;
+        printf("Vendedor excluído com sucesso!\n");
+    } else {
+        printf("Exclusão cancelada.\n");
+    }
+    pausar();
+}
+
+
 int main() {
     setlocale(LC_ALL, "Portuguese");
     
     printf("=======================================\n");
-    printf("  SISTEMA DE VENDAS - MÓDULO PRODUTOS\n");
-    printf("  Responsável: Lucas Siqueira\n");
-    printf("  Sprint 1 - Implementação CRUD\n");
+    printf("Inicializando Sistema de Vendas...\n");
     printf("=======================================\n");
     printf("Pressione Enter para continuar...");
     getchar();
