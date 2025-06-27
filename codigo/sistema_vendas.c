@@ -66,6 +66,8 @@ int num_vendedores = 0;
 int proximo_codigo_produto = 1;
 int proximo_numero_vendedor = 1;
 
+void cadastrar_comprador();
+
 void cadastrar_produto();
 void consultar_produtos();
 void alterar_produto();
@@ -485,6 +487,66 @@ void excluir_vendedor() {
     } else {
         printf("Exclusão cancelada.\n");
     }
+    pausar();
+}
+
+void cadastrar_comprador() {
+    
+    if (num_compradores >= MAX_COMPRADORES) {
+        printf("Limite máximo de compradores atingido!\n");
+        pausar();
+        return;
+    }
+
+    Comprador novo_comprador;
+
+    printf("\n=== CADASTRAR COMPRADOR ===\n");
+    
+    printf("Nome: ");
+    fgets(novo_comprador.nome, MAX_STRING, stdin);
+    novo_comprador.nome[strcspn(novo_comprador.nome, "\n")] = 0;
+
+    do {
+        printf("CPF: ");
+        fgets(novo_comprador.cpf, 15, stdin);
+        novo_comprador.cpf[strcspn(novo_comprador.cpf, "\n")] = 0;
+        
+        if (buscar_comprador_por_cpf(novo_comprador.cpf) != -1) {
+            printf("CPF já cadastrado! Digite outro CPF.\n");
+        }
+    } while (buscar_comprador_por_cpf(novo_comprador.cpf) != -1);
+
+    printf("E-mail: ");
+    fgets(novo_comprador.email, MAX_STRING, stdin);
+    novo_comprador.email[strcspn(novo_comprador.email, "\n")] = 0;
+
+    printf("\n--- ENDEREÇO DE ENTREGA ---\n");
+    printf("Rua: ");
+    fgets(novo_comprador.endereco.rua, MAX_STRING, stdin);
+    novo_comprador.endereco.rua[strcspn(novo_comprador.endereco.rua, "\n")] = 0;
+
+    printf("Bairro: ");
+    fgets(novo_comprador.endereco.bairro, MAX_STRING, stdin);
+    novo_comprador.endereco.bairro[strcspn(novo_comprador.endereco.bairro, "\n")] = 0;
+
+    printf("Cidade: ");
+    fgets(novo_comprador.endereco.cidade, MAX_STRING, stdin);
+    novo_comprador.endereco.cidade[strcspn(novo_comprador.endereco.cidade, "\n")] = 0;
+
+    printf("Estado (sigla): ");
+    fgets(novo_comprador.endereco.estado, 3, stdin);
+    novo_comprador.endereco.estado[strcspn(novo_comprador.endereco.estado, "\n")] = 0;
+
+    printf("CEP: ");
+    fgets(novo_comprador.endereco.cep, 10, stdin);
+    novo_comprador.endereco.cep[strcspn(novo_comprador.endereco.cep, "\n")] = 0;
+
+    novo_comprador.ativo = 1;
+    compradores[num_compradores] = novo_comprador;
+    num_compradores++;
+
+    printf("Comprador cadastrado com sucesso!\n");
+    salvar_compradores();
     pausar();
 }
 
