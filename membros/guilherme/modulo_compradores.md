@@ -8,10 +8,10 @@
 ## 📋 Tarefas da Sprint 2
 
 ### 1. Documentação das Funções
-- [ ] `buscar_comprador_por_cpf()`
-- [ ] `cadastrar_comprador()`
-- [ ] `consultar_compradores()`
-- [ ] `alterar_comprador()`
+- [X] `buscar_comprador_por_cpf()`
+- [X] `cadastrar_comprador()`
+- [X] `consultar_compradores()`
+- [X] `alterar_comprador()`
 - [ ] `excluir_comprador()`
 
 ### 2. Implementação
