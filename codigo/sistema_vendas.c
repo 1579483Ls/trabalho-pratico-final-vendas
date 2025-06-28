@@ -68,6 +68,7 @@ int proximo_numero_vendedor = 1;
 
 void cadastrar_comprador();
 void consultar_compradores();
+void alterar_comprador();
 int buscar_comprador_por_cpf(char *cpf);
 
 void cadastrar_produto();
@@ -584,6 +585,75 @@ void consultar_compradores() {
             printf("----------------------------------------\n");
         }
     }
+    pausar();
+}
+
+void alterar_comprador() {
+    char cpf[15];
+    int indice;
+    
+    printf("\n=== ALTERAR COMPRADOR ===\n");
+    printf("Digite o CPF do comprador: ");
+    fgets(cpf, 15, stdin);
+    cpf[strcspn(cpf, "\n")] = 0;
+
+    indice = buscar_comprador_por_cpf(cpf);
+    if (indice == -1) {
+        printf("Comprador não encontrado!\n");
+        pausar();
+        return;
+    }
+
+    printf("Comprador encontrado: %s\n", compradores[indice].nome);
+    printf("1 - Alterar nome\n");
+    printf("2 - Alterar e-mail\n");
+    printf("3 - Alterar endereço\n");
+    printf("Escolha: ");
+    
+    int opcao;
+    scanf("%d", &opcao);
+    limpar_buffer();
+
+    switch (opcao) {
+        case 1:
+            printf("Novo nome: ");
+            fgets(compradores[indice].nome, MAX_STRING, stdin);
+            compradores[indice].nome[strcspn(compradores[indice].nome, "\n")] = 0;
+            break;
+        case 2:
+            printf("Novo e-mail: ");
+            fgets(compradores[indice].email, MAX_STRING, stdin);
+            compradores[indice].email[strcspn(compradores[indice].email, "\n")] = 0;
+            break;
+        case 3:
+            printf("Nova rua: ");
+            fgets(compradores[indice].endereco.rua, MAX_STRING, stdin);
+            compradores[indice].endereco.rua[strcspn(compradores[indice].endereco.rua, "\n")] = 0;
+            
+            printf("Novo bairro: ");
+            fgets(compradores[indice].endereco.bairro, MAX_STRING, stdin);
+            compradores[indice].endereco.bairro[strcspn(compradores[indice].endereco.bairro, "\n")] = 0;
+            
+            printf("Nova cidade: ");
+            fgets(compradores[indice].endereco.cidade, MAX_STRING, stdin);
+            compradores[indice].endereco.cidade[strcspn(compradores[indice].endereco.cidade, "\n")] = 0;
+            
+            printf("Novo estado: ");
+            fgets(compradores[indice].endereco.estado, 3, stdin);
+            compradores[indice].endereco.estado[strcspn(compradores[indice].endereco.estado, "\n")] = 0;
+            
+            printf("Novo CEP: ");
+            fgets(compradores[indice].endereco.cep, 10, stdin);
+            compradores[indice].endereco.cep[strcspn(compradores[indice].endereco.cep, "\n")] = 0;
+            break;
+        default:
+            printf("Opcao invalida!\n");
+            pausar();
+            return;
+    }
+
+    printf("Comprador alterado com sucesso!\n");
+    salvar_compradores();
     pausar();
 }
 
