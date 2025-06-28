@@ -67,6 +67,7 @@ int proximo_codigo_produto = 1;
 int proximo_numero_vendedor = 1;
 
 void cadastrar_comprador();
+void consultar_compradores();
 int buscar_comprador_por_cpf(char *cpf);
 
 void cadastrar_produto();
@@ -560,7 +561,31 @@ int buscar_comprador_por_cpf(char *cpf) {
     return -1;  // Comprador não encontrado ou inativo
 }
 
+void consultar_compradores() {
+    printf("\n=== CONSULTAR COMPRADORES ===\n");
+    
+    if (num_compradores == 0) {
+        printf("Nenhum comprador cadastrado.\n");
+        pausar();
+        return;
+    }
 
+    for (int i = 0; i < num_compradores; i++) {
+        if (compradores[i].ativo) {
+            printf("\nNome: %s\n", compradores[i].nome);
+            printf("CPF: %s\n", compradores[i].cpf);
+            printf("E-mail: %s\n", compradores[i].email);
+            printf("Endereço: %s, %s, %s - %s, CEP: %s\n",
+                   compradores[i].endereco.rua,
+                   compradores[i].endereco.bairro,
+                   compradores[i].endereco.cidade,
+                   compradores[i].endereco.estado,
+                   compradores[i].endereco.cep);
+            printf("----------------------------------------\n");
+        }
+    }
+    pausar();
+}
 
 
 int main() {
