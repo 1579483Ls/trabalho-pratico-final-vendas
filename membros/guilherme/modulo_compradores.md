@@ -77,14 +77,6 @@
 | CT010 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT011 | [ ] | [ ] Passou / [ ] Falhou | |
 
-## 📝 Regras de Negócio Específicas
-
-## 🔄 Integração com Outros Módulos
-
-## 📊 Estrutura de Endereço
-```c
-
-```
 
 ## 📝 Notas de Implementação
 <!-- Adicionar observações durante o desenvolvimento -->
