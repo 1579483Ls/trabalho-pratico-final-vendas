@@ -69,6 +69,7 @@ int proximo_numero_vendedor = 1;
 void cadastrar_comprador();
 void consultar_compradores();
 void alterar_comprador();
+void excluir_comprador();
 int buscar_comprador_por_cpf(char *cpf);
 
 void cadastrar_produto();
@@ -654,6 +655,39 @@ void alterar_comprador() {
 
     printf("Comprador alterado com sucesso!\n");
     salvar_compradores();
+    pausar();
+}
+
+void excluir_comprador() {
+    char cpf[15];
+    int indice;
+    
+    printf("\n=== EXCLUIR COMPRADOR ===\n");
+    printf("Digite o CPF do comprador: ");
+    fgets(cpf, 15, stdin);
+    cpf[strcspn(cpf, "\n")] = 0;
+
+    indice = buscar_comprador_por_cpf(cpf);
+    if (indice == -1) {
+        printf("Comprador não encontrado!\n");
+        pausar();
+        return;
+    }
+
+    printf("Comprador: %s\n", compradores[indice].nome);
+    printf("Confirma exclusão? (s/n): ");
+    
+    char confirmacao;
+    scanf("%c", &confirmacao);
+    limpar_buffer();
+
+    if (tolower(confirmacao) == 's') {
+        compradores[indice].ativo = 0;
+        printf("Comprador excluido com sucesso!\n");
+        salvar_compradores();
+    } else {
+        printf("Exclusao cancelada.\n");
+    }
     pausar();
 }
 
