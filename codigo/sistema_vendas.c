@@ -72,6 +72,8 @@ void alterar_comprador();
 void excluir_comprador();
 int buscar_comprador_por_cpf(char *cpf);
 
+void menu_compradores();
+
 void cadastrar_produto();
 void consultar_produtos();
 void alterar_produto();
@@ -689,6 +691,35 @@ void excluir_comprador() {
         printf("Exclusao cancelada.\n");
     }
     pausar();
+}
+
+void menu_compradores() {
+    int opcao;
+    
+    do {
+        system("cls");
+        printf("=== MENU COMPRADORES ===\n");
+        printf("1 - Cadastrar comprador\n");
+        printf("2 - Consultar compradores\n");
+        printf("3 - Alterar comprador\n");
+        printf("4 - Excluir comprador\n");
+        printf("0 - Voltar ao menu principal\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+        limpar_buffer();
+
+        switch (opcao) {
+            case 1: cadastrar_comprador(); break;   
+            case 2: consultar_compradores(); break; 
+            case 3: alterar_comprador(); break;     
+            case 4: excluir_comprador(); break;    
+            case 0: break;  
+            default: 
+                printf("Opcao invalida!\n");
+                pausar();
+                break;
+        }
+    } while (opcao != 0);
 }
 
 
