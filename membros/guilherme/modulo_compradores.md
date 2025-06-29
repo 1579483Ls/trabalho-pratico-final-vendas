@@ -12,7 +12,7 @@
 - [X] `cadastrar_comprador()`
 - [X] `consultar_compradores()`
 - [X] `alterar_comprador()`
-- [ ] `excluir_comprador()`
+- [X] `excluir_comprador()`
 
 ### 2. Implementação
 - [ ] Casos de sucesso
@@ -27,13 +27,13 @@
 ## 📚 Funções a Implementar
 
 ### `int buscar_comprador_por_cpf(char *cpf)`
-**Status**:  
+**Status**:  Implementado
 **Descrição**: Busca comprador pelo CPF  
 **Entrada**: CPF do comprador  
 **Saída**: Índice no array ou -1  
 
 ### `void cadastrar_comprador()`
-**Status**:  
+**Status**:  Implementado
 **Descrição**: Cadastra novo comprador  
 **Validações necessárias**:
 - Nome não pode ser vazio
@@ -42,18 +42,18 @@
 - Endereço completo obrigatório
 
 ### `void consultar_compradores()`
-**Status**:   
+**Status**:   Implementado
 **Descrição**: Lista compradores ativos  
 **Formato**: Dados pessoais + endereço completo
 
 ### `void alterar_comprador()`
-**Status**:   
+**Status**:   Implementado
 **Descrição**: Altera dados do comprador  
 **Permite alterar**: Nome, email, endereço  
 **Não permite**: CPF
 
 ### `void excluir_comprador()`
-**Status**:   
+**Status**:   Implementado
 **Descrição**: Remove comprador (exclusão lógica)  
 **Confirmação**: Sim/Não
 
