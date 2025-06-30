@@ -59,7 +59,25 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 
 ## 💰 Módulo de Vendas (Gustavo)
 
+### `int buscar_venda_por_codigo(int codigo)`
+**Propósito**: Localiza uma venda pelo código  
+**Parâmetros de Entrada**: 
+- `codigo`: Código da venda a ser buscada
+**Parâmetros de Saída**: 
+- Retorna o índice da venda no array ou -1 se não encontrada
+**Responsabilidade**: Gustavo
 
+### `void cadastrar_venda()`
+**Propósito**: Registra uma nova venda no sistema  
+**Parâmetros de Entrada**: Nenhum (lê dados do usuário)
+**Parâmetros de Saída**: Nenhum
+**Funcionalidades**:
+- Validação de comprador e vendedor
+- Múltiplos itens por venda
+- Controle de estoque automático
+- Cálculo de comissão (3%)
+- Geração automática de código
+**Responsabilidade**: Gustavo
 
 ---
 

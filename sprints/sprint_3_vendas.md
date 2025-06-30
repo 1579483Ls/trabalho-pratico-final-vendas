@@ -42,8 +42,8 @@ Implementar o módulo de vendas, integrando todos os módulos anteriores e crian
 
 ### Função: `void cadastrar_venda()`
 **Propósito**: Registrar uma nova venda no sistema com validações e integrações
-**Parâmetros de Entrada**: Nenhum (coleta via interface)
-**Parâmetros de Saída**: Nenhum
+**Parâmetros de Entrada**: ("Número do vendedor: ");("CPF do comprador: ");("Código do produto: ");("Adicionar mais itens? (s/n): ");
+**Parâmetros de Saída**: ("Limite máximo de vendas atingido!\n") ("Comprador não encontrado!\n"); ("Vendedor não encontrado!\n");("Limite máximo de itens por venda atingido!\n");("Produto não encontrado!\n");("Quantidade insuficiente em estoque!\n");("Item adicionado! Total do item: R$ %.2f\n")("Venda cancelada - nenhum item adicionado.\n");("\nVenda cadastrada com sucesso!\n");("Código da venda: %d\n", nova_venda.codigo_venda);("Valor total: R$ %.2f\n", nova_venda.valor_total);("Comissão do vendedor: R$ %.2f\n", comissao);
 **Integrações Necessárias**:
 - Validar comprador via `buscar_comprador_por_cpf()`
 - Validar vendedor via `buscar_vendedor_por_numero()`

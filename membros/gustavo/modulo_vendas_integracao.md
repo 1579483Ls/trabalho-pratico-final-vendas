@@ -9,8 +9,8 @@
 ## 📋 Tarefas da Sprint 3
 
 ### 1. Documentação das Funções de Vendas
-- [ ] `buscar_venda_por_codigo()`
-- [ ] `cadastrar_venda()`
+- [x] `buscar_venda_por_codigo()`
+- [x] `cadastrar_venda()`
 - [ ] `consultar_vendas()`
 - [ ] `alterar_venda()`
 - [ ] `excluir_venda()`
@@ -45,13 +45,13 @@
 ## 📚 Funções de Vendas a Implementar
 
 ### `int buscar_venda_por_codigo(int codigo)`
-**Status**:   
+**Status**:  ✅ Implementado 
 **Descrição**: Busca venda pelo código  
 **Entrada**: Código da venda  
 **Saída**: Índice no array ou -1  
 
 ### `void cadastrar_venda()`
-**Status**:   
+**Status**:  ✅ Implementado  
 **Descrição**: Registra nova venda  
 **Integrações necessárias**:
 - Validar comprador (CPF)
