@@ -1,7 +1,7 @@
 # Sprint 3 - Módulo de Vendas
 **Duração**: 3-4 dias  
 **Responsável**: Gustavo  
-**Data Início**: [A definir]  
+**Data Início**: 30/06/25  
 **Data Fim**: [A definir]  
 
 ## 🎯 Objetivo da Sprint
