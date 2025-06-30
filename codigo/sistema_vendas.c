@@ -812,6 +812,141 @@ void menu_principal() {
     } while (opcao != 0);
 }
 
+void cadastrar_venda() {
+    // Verificar se há espaço disponível no array
+    if (num_vendas >= MAX_VENDAS) {
+        printf("Limite máximo de vendas atingido!\n");
+        pausar();
+        return;
+    }
+
+    Venda nova_venda;
+    char cpf[15];
+    int numero_vendedor;
+    int indice_comprador, indice_vendedor;
+
+    printf("\n=== CADASTRAR VENDA ===\n");
+    
+    nova_venda.codigo_venda = proximo_codigo_venda++;
+
+    // Buscar comprador
+    printf("CPF do comprador: ");
+    fgets(cpf, 15, stdin);
+    cpf[strcspn(cpf, "\n")] = 0;
+
+    indice_comprador = buscar_comprador_por_cpf(cpf);
+    if (indice_comprador == -1) {
+        printf("Comprador não encontrado!\n");
+        pausar();
+        return;
+    }
+    nova_venda.codigo_comprador = indice_comprador;
+
+    // Buscar vendedor
+    printf("Número do vendedor: ");
+    scanf("%d", &numero_vendedor);
+    limpar_buffer();
+
+    indice_vendedor = buscar_vendedor_por_numero(numero_vendedor);
+    if (indice_vendedor == -1) {
+        printf("Vendedor não encontrado!\n");
+        pausar();
+        return;
+    }
+    nova_venda.numero_vendedor = numero_vendedor;
+
+    // Cadastrar itens da venda
+    nova_venda.num_itens = 0;
+    nova_venda.valor_total = 0.0;
+    char continuar = 's';
+
+    do {
+        if (nova_venda.num_itens >= MAX_ITENS_VENDA) {
+            printf("Limite máximo de itens por venda atingido!\n");
+            break;
+        }
+
+        ItemVenda item;
+        int codigo_produto, indice_produto;
+
+        printf("\n--- ITEM %d ---\n", nova_venda.num_itens + 1);
+        printf("Código do produto: ");
+        scanf("%d", &codigo_produto);
+        limpar_buffer();
+
+        indice_produto = buscar_produto_por_codigo(codigo_produto);
+        if (indice_produto == -1) {
+            printf("Produto não encontrado!\n");
+            continue;
+        }
+
+        item.codigo_produto = codigo_produto;
+        strcpy(item.nome_produto, produtos[indice_produto].nome);
+        item.preco_unitario = produtos[indice_produto].preco_venda;
+
+        printf("Produto: %s (Estoque: %d)\n", 
+               produtos[indice_produto].nome, 
+               produtos[indice_produto].quantidade_estoque);
+        
+        printf("Quantidade a vender: ");
+        scanf("%d", &item.quantidade);
+        limpar_buffer();
+
+        if (item.quantidade > produtos[indice_produto].quantidade_estoque) {
+            printf("Quantidade insuficiente em estoque!\n");
+            continue;
+        }
+
+        item.preco_total = item.quantidade * item.preco_unitario;
+        
+        // Atualizar estoque
+        produtos[indice_produto].quantidade_estoque -= item.quantidade;
+        
+        nova_venda.itens[nova_venda.num_itens] = item;
+        nova_venda.num_itens++;
+        nova_venda.valor_total += item.preco_total;
+
+        printf("Item adicionado! Total do item: R$ %.2f\n", item.preco_total);
+        
+        if (nova_venda.num_itens < MAX_ITENS_VENDA) {
+            printf("Adicionar mais itens? (s/n): ");
+            scanf("%c", &continuar);
+            limpar_buffer();
+        }
+
+    } while (tolower(continuar) == 's' && nova_venda.num_itens < MAX_ITENS_VENDA);
+
+    if (nova_venda.num_itens == 0) {
+        printf("Venda cancelada - nenhum item adicionado.\n");
+        pausar();
+        return;
+    }
+
+    // Calcular comissão do vendedor (3%)
+    float comissao = nova_venda.valor_total * 0.03;
+    vendedores[indice_vendedor].comissoes += comissao;
+
+    nova_venda.ativo = 1;
+    vendas[num_vendas] = nova_venda;
+    num_vendas++;
+
+    printf("\nVenda cadastrada com sucesso!\n");
+    printf("Código da venda: %d\n", nova_venda.codigo_venda);
+    printf("Valor total: R$ %.2f\n", nova_venda.valor_total);
+    printf("Comissão do vendedor: R$ %.2f\n", comissao);
+    pausar();
+}
+
+int buscar_venda_por_codigo(int codigo) {
+    for (int i = 0; i < num_vendas; i++) {
+        if (vendas[i].codigo_venda == codigo && vendas[i].ativo) {
+            return i;  
+        }
+    }
+    return -1;  
+}
+
+
 int main() {
     printf("Inicializando Sistema de Vendas...\n");
     carregar_todos_dados();
