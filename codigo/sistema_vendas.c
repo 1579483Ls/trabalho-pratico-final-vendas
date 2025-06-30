@@ -20,6 +20,8 @@ Metodologia: Scrum com 4 sprints de 3-4 dias cada
 #define MAX_PRODUTOS 100
 #define MAX_VENDEDORES 50
 #define MAX_COMPRADORES 100
+#define MAX_VENDAS 200
+#define MAX_ITENS_VENDA 20
 #define MAX_STRING 100
 
 typedef struct {
@@ -54,21 +56,45 @@ typedef struct {
     int ativo;              
 } Comprador;
 
+typedef struct {
+    char nome_produto[MAX_STRING]; 
+    int codigo_produto;            
+    int quantidade;              
+    float preco_unitario;         
+    float preco_total;           
+} ItemVenda;
+
+typedef struct {
+    int codigo_venda;            
+    int codigo_comprador;        
+    int numero_vendedor;         
+    ItemVenda itens[MAX_ITENS_VENDA];  
+    int num_itens;              
+    float valor_total;         
+    int ativo;                  
+} Venda;
+
+
 Produto produtos[MAX_PRODUTOS];           
 Vendedor vendedores[MAX_VENDEDORES];     
 Comprador compradores[MAX_COMPRADORES];   
+Venda vendas[MAX_VENDAS];                 
 
 int num_produtos = 0;        
 int num_vendedores = 0;   
 int num_compradores = 0;   
+int num_vendas = 0;          
 
 int proximo_codigo_produto = 1;  
 int proximo_numero_vendedor = 1;  
+int proximo_codigo_venda = 1;     
+
 
 void menu_principal();
 void menu_produtos();
 void menu_vendedores();
 void menu_compradores();
+void menu_vendas();          
 
 void cadastrar_produto();
 void consultar_produtos();
@@ -87,6 +113,15 @@ void consultar_compradores();
 void alterar_comprador();
 void excluir_comprador();
 int buscar_comprador_por_cpf(char *cpf);
+
+void cadastrar_venda();                       
+void consultar_vendas();
+
+void cadastrar_venda();                       
+void consultar_vendas();                      
+void alterar_venda();                         
+void excluir_venda();                         
+int buscar_venda_por_codigo(int codigo);
 
 void limpar_buffer();
 void pausar();
