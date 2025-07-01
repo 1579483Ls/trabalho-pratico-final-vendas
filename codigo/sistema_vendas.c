@@ -812,6 +812,15 @@ void menu_principal() {
     } while (opcao != 0);
 }
 
+int buscar_venda_por_codigo(int codigo) {
+    for (int i = 0; i < num_vendas; i++) {
+        if (vendas[i].codigo_venda == codigo && vendas[i].ativo) {
+            return i;  
+        }
+    }
+    return -1;  
+}
+
 void cadastrar_venda() {
     // Verificar se há espaço disponível no array
     if (num_vendas >= MAX_VENDAS) {
@@ -937,13 +946,89 @@ void cadastrar_venda() {
     pausar();
 }
 
-int buscar_venda_por_codigo(int codigo) {
+void consultar_vendas() {
+    printf("\n=== CONSULTAR VENDAS ===\n");
+    
+    if (num_vendas == 0) {
+        printf("Nenhuma venda cadastrada.\n");
+        pausar();
+        return;
+    }
+
     for (int i = 0; i < num_vendas; i++) {
-        if (vendas[i].codigo_venda == codigo && vendas[i].ativo) {
-            return i;  
+        if (vendas[i].ativo) {
+            printf("\nCódigo da venda: %d\n", vendas[i].codigo_venda);
+            printf("Comprador: %s\n", compradores[vendas[i].codigo_comprador].nome);
+            printf("Vendedor: %s\n", vendedores[buscar_vendedor_por_numero(vendas[i].numero_vendedor)].nome);
+            printf("Valor total: R$ %.2f\n", vendas[i].valor_total);
+            printf("Itens:\n");
+            
+            for (int j = 0; j < vendas[i].num_itens; j++) {
+                printf("  - %s (Qtd: %d, Unit: R$ %.2f, Total: R$ %.2f)\n",
+                       vendas[i].itens[j].nome_produto,
+                       vendas[i].itens[j].quantidade,
+                       vendas[i].itens[j].preco_unitario,
+                       vendas[i].itens[j].preco_total);
+            }
+            printf("----------------------------------------\n");
         }
     }
-    return -1;  
+    pausar();
+}
+
+void alterar_venda() {
+    printf("\n=== ALTERAR VENDA ===\n");
+    printf("Funcionalidade não implementada nesta versão.\n");
+    printf("Para alterar uma venda, exclua e cadastre novamente.\n");
+    pausar();
+}
+
+void excluir_venda() {
+    int codigo, indice;
+    
+    printf("\n=== EXCLUIR VENDA ===\n");
+    printf("Digite o código da venda: ");
+    scanf("%d", &codigo);
+    limpar_buffer();
+
+    indice = buscar_venda_por_codigo(codigo);
+    if (indice == -1) {
+        printf("Venda não encontrada!\n");
+        pausar();
+        return;
+    }
+
+    printf("Venda código %d - Valor: R$ %.2f\n", 
+           vendas[indice].codigo_venda, 
+           vendas[indice].valor_total);
+    printf("Confirma exclusão? (s/n): ");
+    
+    char confirmacao;
+    scanf("%c", &confirmacao);
+    limpar_buffer();
+
+    if (tolower(confirmacao) == 's') {
+        // Reverter estoque dos produtos
+        for (int i = 0; i < vendas[indice].num_itens; i++) {
+            int indice_produto = buscar_produto_por_codigo(vendas[indice].itens[i].codigo_produto);
+            if (indice_produto != -1) {
+                produtos[indice_produto].quantidade_estoque += vendas[indice].itens[i].quantidade;
+            }
+        }
+        
+        // Reverter comissão do vendedor
+        int indice_vendedor = buscar_vendedor_por_numero(vendas[indice].numero_vendedor);
+        if (indice_vendedor != -1) {
+            float comissao = vendas[indice].valor_total * 0.03;
+            vendedores[indice_vendedor].comissoes -= comissao;
+        }
+        
+        vendas[indice].ativo = 0;
+        printf("Venda excluída com sucesso!\n");
+    } else {
+        printf("Exclusão cancelada.\n");
+    }
+    pausar();
 }
 
 
