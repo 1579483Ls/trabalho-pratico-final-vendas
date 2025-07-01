@@ -11,9 +11,9 @@
 ### 1. Documentação das Funções de Vendas
 - [x] `buscar_venda_por_codigo()`
 - [x] `cadastrar_venda()`
-- [ ] `consultar_vendas()`
-- [ ] `alterar_venda()`
-- [ ] `excluir_venda()`
+- [x] `consultar_vendas()`
+- [x] `alterar_venda()`
+- [x] `excluir_venda()`
 
 ### 2. Implementação de Vendas
 - [ ] Casos de sucesso
@@ -61,17 +61,17 @@
 - Calcular comissão do vendedor
 
 ### `void consultar_vendas()`
-**Status**:   
+**Status**:  ✅ Implementado  
 **Descrição**: Lista vendas ativas  
 **Formato**: Dados completos com itens detalhados
 
 ### `void alterar_venda()`
-**Status**:   
+**Status**:   ✅ Implementado 
 **Descrição**: Altera dados da venda  
 **Decisão**: Orientar exclusão e recadastro
 
 ### `void excluir_venda()`
-**Status**:   
+**Status**:   ✅ Implementado 
 **Descrição**: Cancela venda  
 **Funcionalidades**:
 - Reverter estoque

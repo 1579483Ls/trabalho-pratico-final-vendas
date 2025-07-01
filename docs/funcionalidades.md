@@ -79,6 +79,34 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 - Geração automática de código
 **Responsabilidade**: Gustavo
 
+### `void consultar_vendas()`
+**Propósito**: Exibe histórico de vendas ativas  
+**Parâmetros de Entrada**: Nenhum
+**Parâmetros de Saída**: Nenhum
+**Funcionalidades**:
+- Dados completos da venda
+- Detalhamento de itens
+- Valores totais
+**Responsabilidade**: Gustavo
+
+### `void alterar_venda()`
+**Propósito**: Modifica uma venda existente  
+**Parâmetros de Entrada**: Nenhum
+**Parâmetros de Saída**: Nenhum
+**Status**: Não implementada (orienta exclusão/recadastro)
+**Responsabilidade**: Gustavo
+
+### `void excluir_venda()`
+**Propósito**: Cancela uma venda do sistema  
+**Parâmetros de Entrada**: Nenhum (solicita código ao usuário)
+**Parâmetros de Saída**: Nenhum
+**Funcionalidades**:
+- Reversão de estoque
+- Reversão de comissão
+- Confirmação de exclusão
+- Exclusão lógica (ativo = 0)
+**Responsabilidade**: Gustavo
+
 ---
 
 ## 📄 Módulo de Funcionalidades Auxiliares (Gustavo)

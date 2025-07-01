@@ -16,13 +16,13 @@ Implementar o módulo de vendas, integrando todos os módulos anteriores e crian
 4. **Como** administrador, **eu quero** excluir vendas **para** cancelar transações
 
 ### Tarefas Técnicas
-- [ ] **T001**: Documentar todas as funções do módulo de vendas
-- [ ] **T002**: Implementar casos de sucesso para vendas
-- [ ] **T003**: Implementar integração com módulo de produtos
-- [ ] **T004**: Implementar integração com módulo de vendedores
-- [ ] **T005**: Implementar integração com módulo de compradores
-- [ ] **T006**: Implementar controle automático de estoque
-- [ ] **T007**: Implementar cálculo automático de comissões
+- [x] **T001**: Documentar todas as funções do módulo de vendas
+- [x] **T002**: Implementar casos de sucesso para vendas
+- [x] **T003**: Implementar integração com módulo de produtos
+- [x] **T004**: Implementar integração com módulo de vendedores
+- [x] **T005**: Implementar integração com módulo de compradores
+- [x] **T006**: Implementar controle automático de estoque
+- [x] **T007**: Implementar cálculo automático de comissões
 - [ ] **T008**: Definir casos de teste completos
 - [ ] **T009**: Executar testes unitários
 - [ ] **T010**: Executar testes de integração
@@ -59,7 +59,7 @@ Implementar o módulo de vendas, integrando todos os módulos anteriores e crian
 ### Função: `void consultar_vendas()`
 **Propósito**: Exibir histórico detalhado de vendas ativas
 **Parâmetros de Entrada**: Nenhum
-**Parâmetros de Saída**: Nenhum (saída via printf)
+**Parâmetros de Saída**:("Nenhuma venda cadastrada.\n");("\nCódigo da venda: %d\n", vendas[i].codigo_venda);("Comprador: %s\n", compradores[vendas[i].codigo_comprador].nome);("Vendedor: %s\n", vendedores[buscar_vendedor_por_numero(vendas[i].numero_vendedor)].nome); ("Valor total: R$ %.2f\n", vendas[i].valor_total);("Itens:\n")(Qtd: %d, Unit: R$ %.2f, Total: R$ %.2f)
 **Formato de Saída**: 
 - Código da venda
 - Nome do comprador
@@ -75,8 +75,9 @@ Implementar o módulo de vendas, integrando todos os módulos anteriores e crian
 
 ### Função: `void excluir_venda()`
 **Propósito**: Cancelar uma venda e reverter todas as integrações
-**Parâmetros de Entrada**: Nenhum (solicita código via interface)
-**Parâmetros de Saída**: Nenhum
+**Parâmetros de Entrada**:    ("%c", &confirmacao);("Digite o código da venda: ");
+
+**Parâmetros de Saída**:         ("Funcionalidade não implementada nesta versão.\n");("Para alterar uma venda, exclua e cadastre novamente.\n");("Venda código %d - Valor: R$ %.2f\n",vendas[indice].codigo_venda, vendas[indice].valor_total); ("Venda excluída com sucesso!\n");printf("Exclusão cancelada.\n");("Venda não encontrada!\n");
 **Operações de Reversão**:
 - Reverter estoque dos produtos vendidos
 - Reverter comissão do vendedor
@@ -312,13 +313,13 @@ Implementar o módulo de vendas, integrando todos os módulos anteriores e crian
 - Acesso direto ao array `compradores[]`: Dados para exibição
 
 ## ✅ Definition of Done
-- [ ] Todas as funções de venda implementadas
-- [ ] Integração com produtos funcionando
-- [ ] Integração com vendedores funcionando
-- [ ] Integração com compradores funcionando
-- [ ] Controle de estoque automático
-- [ ] Cálculo de comissões automático
-- [ ] Documentação completa
+- [x] Todas as funções de venda implementadas
+- [x] Integração com produtos funcionando
+- [x] Integração com vendedores funcionando
+- [x] Integração com compradores funcionando
+- [x] Controle de estoque automático
+- [x] Cálculo de comissões automático
+- [x] Documentação completa
 - [ ] Todos os casos de teste executados
 - [ ] Relatório de testes gerado
 - [ ] Bugs críticos corrigidos
