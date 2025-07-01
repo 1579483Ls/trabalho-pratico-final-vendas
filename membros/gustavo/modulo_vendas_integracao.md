@@ -16,15 +16,15 @@
 - [x] `excluir_venda()`
 
 ### 2. Implementação de Vendas
-- [ ] Casos de sucesso
-- [ ] Tratamento de erros
-- [ ] Validações
-- [ ] Integração com outros módulos
+- [x] Casos de sucesso
+- [x] Tratamento de erros
+- [x] Validações
+- [x] Integração com outros módulos
 
 ### 3. Testes de Vendas
-- [ ] Definir casos de teste
-- [ ] Executar testes
-- [ ] Documentar resultados
+- [x] Definir casos de teste
+- [x] Executar testes
+- [x] Documentar resultados
 
 ## 📋 Tarefas da Sprint 4
 

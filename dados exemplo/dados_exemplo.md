@@ -32,14 +32,45 @@ Este arquivo contém dados pré-definidos para facilitar a demonstração e test
 
 ## 🛒 Compradores de Exemplo (Guilherme - Sprint 2)
 
-```
 
----
 
 ## 💰 Vendas de Exemplo (Gustavo - Sprint 3)
 
+### Venda 1
+- **Comprador**: CPF 123.456.789-01 (Pedro)
+- **Vendedor**: Número 1 (João)
+- **Itens**:
+  - Produto 1 (Notebook): Quantidade 1, Preço R$ 2.499,99
+  - Produto 2 (Mouse): Quantidade 2, Preço R$ 89,90
+- **Total Esperado**: R$ 2.679,79
+- **Comissão Esperada**: R$ 80,39 (3%)
 
-```
+### Venda 2
+- **Comprador**: CPF 987.654.321-02 (Luciana)
+- **Vendedor**: Número 2 (Maria)
+- **Itens**:
+  - Produto 3 (Smartphone): Quantidade 1, Preço R$ 3.299,00
+- **Total Esperado**: R$ 3.299,00
+- **Comissão Esperada**: R$ 98,97 (3%)
+
+### Venda 3
+- **Comprador**: CPF 456.789.123-03 (Roberto)
+- **Vendedor**: Número 1 (João)
+- **Itens**:
+  - Produto 4 (Teclado): Quantidade 1, Preço R$ 249,99
+  - Produto 5 (Monitor): Quantidade 2, Preço R$ 699,90
+- **Total Esperado**: R$ 1.649,79
+- **Comissão Esperada**: R$ 49,49 (3%)
+
+### Venda 4 (Para testar frete)
+- **Comprador**: CPF 321.654.987-04 (Fernanda)
+- **Vendedor**: Número 10 (Carlos)
+- **Itens**:
+  - Produto 2 (Mouse): Quantidade 1, Preço R$ 89,90
+- **Total Esperado**: R$ 89,90
+- **Comissão Esperada**: R$ 2,70 (3%)
+- **Frete Esperado**: R$ 30,00 (valor baixo)
+
 
 ---
 
