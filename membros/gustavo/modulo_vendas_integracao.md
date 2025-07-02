@@ -29,13 +29,13 @@
 ## 📋 Tarefas da Sprint 4
 
 ### 1. Documentação das Funções Auxiliares
-- [ ] `calcular_frete()`
-- [ ] `emitir_nota_fiscal()`
+- [x] `calcular_frete()`
+- [x] `emitir_nota_fiscal()`
 
 ### 2. Implementação Auxiliar
-- [ ] Cálculo de frete
-- [ ] Nota fiscal
-- [ ] Integração final
+- [x] Cálculo de frete
+- [x] Nota fiscal
+- [x] Integração final
 
 ### 3. Testes de Integração
 - [ ] Testes end-to-end
@@ -81,7 +81,7 @@
 ## 📚 Funções Auxiliares a Implementar
 
 ### `float calcular_frete(float valor_venda)`
-**Status**:   
+**Status**:   ✅ Implementado 
 **Descrição**: Calcula frete baseado no valor  
 **Regras**:
 - Até R$ 100: R$ 30
@@ -89,7 +89,7 @@
 - Acima de R$ 300: Grátis
 
 ### `void emitir_nota_fiscal()`
-**Status**:   
+**Status**:   ✅ Implementado 
 **Descrição**: Gera nota fiscal  
 **Integrações**:
 - Dados do comprador

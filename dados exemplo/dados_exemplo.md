@@ -76,8 +76,28 @@ Este arquivo contém dados pré-definidos para facilitar a demonstração e test
 
 ## 📄 Notas Fiscais para Demonstração (Gustavo - Sprint 4)
 
+### Teste de Nota Fiscal 1 (Venda com frete normal)
+- **Código da Venda**: 4 (Fernanda - Mouse)
+- **Verificar**:
+  - Dados completos da Fernanda
+  - Produto: Mouse, Qtd 1, Unit R$ 89,90, Total R$ 89,90
+  - Subtotal: R$ 89,90
+  - Frete: R$ 30,00
+  - Total Geral: R$ 119,90
 
-```
+### Teste de Nota Fiscal 2 (Venda com frete médio)
+- **Código da Venda**: 3 (Roberto - Teclado + Monitor)
+- **Verificar**:
+  - Subtotal: R$ 1.649,79
+  - Frete: R$ 20,00 (entre R$ 100-300)
+  - Total Geral: R$ 1.669,79
+
+### Teste de Nota Fiscal 3 (Venda com frete grátis)
+- **Código da Venda**: 1 (Pedro - Notebook + Mouse)
+- **Verificar**:
+  - Subtotal: R$ 2.679,79
+  - Frete: GRÁTIS (acima de R$ 300)
+  - Total Geral: R$ 2.679,79
 
 ---
 

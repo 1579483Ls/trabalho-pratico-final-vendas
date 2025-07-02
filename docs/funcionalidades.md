@@ -111,7 +111,29 @@ Sistema de vendas desenvolvido em C para gerenciar produtos, vendedores, comprad
 
 ## 📄 Módulo de Funcionalidades Auxiliares (Gustavo)
 
+### `float calcular_frete(float valor_venda)`
+**Propósito**: Calcula o valor do frete baseado no valor da venda  
+**Parâmetros de Entrada**: 
+- `valor_venda`: Valor total da venda
+**Parâmetros de Saída**: 
+- Retorna o valor do frete calculado
+**Regras**:
+- Até R$ 100,00: R$ 30,00
+- R$ 100,01 a R$ 300,00: R$ 20,00
+- Acima de R$ 300,00: Grátis (R$ 0,00)
+**Responsabilidade**: Gustavo
 
+### `void emitir_nota_fiscal()`
+**Propósito**: Gera e exibe nota fiscal de uma venda  
+**Parâmetros de Entrada**: Nenhum (solicita código da venda)
+**Parâmetros de Saída**: Nenhum
+**Funcionalidades**:
+- Dados completos do comprador
+- Detalhamento de produtos
+- Cálculo de frete
+- Subtotal e total geral
+- Formatação adequada para impressão
+**Responsabilidade**: Gustavo
 
 ---
 

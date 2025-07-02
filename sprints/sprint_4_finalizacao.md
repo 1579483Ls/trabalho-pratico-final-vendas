@@ -15,11 +15,11 @@ Finalizar o sistema com funcionalidades auxiliares, realizar testes de integraç
 3. **Como** equipe, **queremos** ter um sistema totalmente integrado e testado
 
 ### Tarefas Técnicas - Funcionalidades Auxiliares
-- [ ] **T001**: Documentar função `calcular_frete()`
-- [ ] **T002**: Documentar função `emitir_nota_fiscal()`
-- [ ] **T003**: Implementar casos de sucesso para nota fiscal
-- [ ] **T004**: Implementar integração nota fiscal com vendas
-- [ ] **T005**: Implementar integração nota fiscal com compradores
+- [x] **T001**: Documentar função `calcular_frete()`
+- [x] **T002**: Documentar função `emitir_nota_fiscal()`
+- [x] **T003**: Implementar casos de sucesso para nota fiscal
+- [x] **T004**: Implementar integração nota fiscal com vendas
+- [x] **T005**: Implementar integração nota fiscal com compradores
 - [ ] **T006**: Definir casos de teste para funcionalidades auxiliares
 - [ ] **T007**: Executar testes de funcionalidades auxiliares
 
