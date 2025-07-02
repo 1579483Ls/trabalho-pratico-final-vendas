@@ -136,20 +136,20 @@
 ### Resumo do Módulo
 - **Responsável**: Gustavo
 - **Sprint**: 3
-- **Período**: [A preencher]
-- **Total de Casos**: 
+- **Período**: 
+- **Total de Casos**: 8
 
 ### Execução de Testes
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
-| VE-F-001 | Venda Simples | [ ] | [ ] P / [ ] F | | |
-| VE-F-002 | Múltiplos Itens | [ ] | [ ] P / [ ] F | | |
-| VE-F-003 | Comprador Inexistente | [ ] | [ ] P / [ ] F | | |
-| VE-F-004 | Vendedor Inexistente | [ ] | [ ] P / [ ] F | | |
-| VE-F-005 | Produto Inexistente | [ ] | [ ] P / [ ] F | | |
-| VE-F-006 | Estoque Insuficiente | [ ] | [ ] P / [ ] F | | |
-| VE-F-007 | Consultar Vendas | [ ] | [ ] P / [ ] F | | |
-| VE-F-008 | Excluir Venda | [ ] | [ ] P / [ ] F | | |
+| VE-F-001 | Venda Simples | [x] | [x] P / [ ] F | | |
+| VE-F-002 | Múltiplos Itens | [x] | [x] P / [ ] F | | |
+| VE-F-003 | Comprador Inexistente | [x] | [x] P / [ ] F | | |
+| VE-F-004 | Vendedor Inexistente | [x] | [x] P / [ ] F | | |
+| VE-F-005 | Produto Inexistente | [x] | [x] P / [ ] F | | |
+| VE-F-006 | Estoque Insuficiente | [x] | [x] P / [ ] F | | |
+| VE-F-007 | Consultar Vendas | [x] | [x] P / [ ] F | | |
+| VE-F-008 | Excluir Venda | [x] | [x] P / [ ] F | | |
 
 ### Bugs Encontrados
 <!-- A ser preenchido por Gustavo -->
@@ -167,16 +167,16 @@
 ### Resumo do Módulo
 - **Responsável**: Gustavo
 - **Sprint**: 4
-- **Período**: [A preencher]
-- **Total de Casos**: 
+- **Período**: 
+- **Total de Casos**: 4
 
 ### Execução de Testes
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
-| A-F-001 | Frete Baixo | [ ] | [ ] P / [ ] F | | |
-| A-F-002 | Frete Médio | [ ] | [ ] P / [ ] F | | |
-| A-F-003 | Frete Grátis | [ ] | [ ] P / [ ] F | | |
-| A-F-004 | Nota Fiscal | [ ] | [ ] P / [ ] F | | |
+| A-F-001 | Frete Baixo | [x] | [x] P / [ ] F | | |
+| A-F-002 | Frete Médio | [x] | [x] P / [ ] F | | |
+| A-F-003 | Frete Grátis | [x] | [x] P / [ ] F | | |
+| A-F-004 | Nota Fiscal | [x] | [x] P / [ ] F | | |
 
 ### Bugs Encontrados
 <!-- A ser preenchido por Gustavo -->

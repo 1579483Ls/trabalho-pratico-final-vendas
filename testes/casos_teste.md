@@ -30,12 +30,77 @@ Documento consolidado com todos os casos de teste do sistema de vendas, organiza
 ## 💰 Módulo de Vendas (Gustavo)
 
 
+### VE-F-001: Cadastrar Venda Simples
+**Prioridade**: Alta  
+**Pré-condições**: Comprador, vendedor e produto existem  
+**Dados de Entrada**:
+- CPF: "123.456.789-00"
+- Vendedor: 1
+- Produto: 1, Quantidade: 2
+
+**Resultado Esperado**: 
+- Venda cadastrada
+- Estoque atualizado
+- Comissão calculada
+
+### VE-F-002: Venda Múltiplos Itens
+**Prioridade**: Alta  
+**Dados de Entrada**: 2 produtos diferentes  
+**Resultado Esperado**: Ambos produtos na venda
+
+### VE-F-003: Comprador Inexistente
+**Prioridade**: Alta  
+**Dados de Entrada**: CPF inexistente  
+**Resultado Esperado**: "Comprador não encontrado!"
+
+### VE-F-004: Vendedor Inexistente
+**Prioridade**: Alta  
+**Dados de Entrada**: Número vendedor inexistente  
+**Resultado Esperado**: "Vendedor não encontrado!"
+
+### VE-F-005: Produto Inexistente
+**Prioridade**: Alta  
+**Dados de Entrada**: Código produto inexistente  
+**Resultado Esperado**: "Produto não encontrado!"
+
+### VE-F-006: Estoque Insuficiente
+**Prioridade**: Alta  
+**Pré-condições**: Produto com estoque 5  
+**Dados de Entrada**: Quantidade 10  
+**Resultado Esperado**: "Quantidade insuficiente em estoque!"
+
+### VE-F-007: Consultar Vendas
+**Prioridade**: Média  
+**Resultado Esperado**: Lista detalhada de vendas
+
+### VE-F-008: Excluir Venda
+**Prioridade**: Alta  
+**Resultado Esperado**: Venda inativa, reversões aplicadas
+
 
 ---
 
 ## 📄 Módulo Auxiliar (Gustavo)
 
+### A-F-001: Calcular Frete Baixo
+**Prioridade**: Alta  
+**Dados de Entrada**: valor = 50.00  
+**Resultado Esperado**: 30.00
 
+### A-F-002: Calcular Frete Médio
+**Prioridade**: Alta  
+**Dados de Entrada**: valor = 200.00  
+**Resultado Esperado**: 20.00
+
+### A-F-003: Calcular Frete Grátis
+**Prioridade**: Alta  
+**Dados de Entrada**: valor = 400.00  
+**Resultado Esperado**: 0.00
+
+### A-F-004: Emitir Nota Fiscal
+**Prioridade**: Alta  
+**Pré-condições**: Venda registrada  
+**Resultado Esperado**: Nota fiscal formatada
 
 ---
 

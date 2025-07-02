@@ -20,8 +20,8 @@ Finalizar o sistema com funcionalidades auxiliares, realizar testes de integraç
 - [x] **T003**: Implementar casos de sucesso para nota fiscal
 - [x] **T004**: Implementar integração nota fiscal com vendas
 - [x] **T005**: Implementar integração nota fiscal com compradores
-- [ ] **T006**: Definir casos de teste para funcionalidades auxiliares
-- [ ] **T007**: Executar testes de funcionalidades auxiliares
+- [x] **T006**: Definir casos de teste para funcionalidades auxiliares
+- [x] **T007**: Executar testes de funcionalidades auxiliares
 
 ### Tarefas de Integração Final
 - [ ] **T008**: Executar testes de integração end-to-end
@@ -216,29 +216,29 @@ Finalizar o sistema com funcionalidades auxiliares, realizar testes de integraç
 
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
-| FA001 | Frete Baixo | [ ] | Passou/Falhou | | |
-| FA002 | Frete Limite Inf | [ ] | Passou/Falhou | | |
-| FA003 | Frete Médio | [ ] | Passou/Falhou | | |
-| FA004 | Frete Limite Sup | [ ] | Passou/Falhou | | |
-| FA005 | Frete Grátis | [ ] | Passou/Falhou | | |
-| FA006 | Frete Zero | [ ] | Passou/Falhou | | |
-| FA007 | Nota Completa | [ ] | Passou/Falhou | | |
-| FA008 | Nota Inexistente | [ ] | Passou/Falhou | | |
-| FA009 | Nota Frete Grátis | [ ] | Passou/Falhou | | |
-| FA010 | Formatação | [ ] | Passou/Falhou | | |
+| FA001 | Frete Baixo | [x] | Passou/Falhou |Passou|15:15|
+| FA002 | Frete Limite Inf | [x] | Passou/Falhou |Passou |15:16|
+| FA003 | Frete Médio | [x] | Passou/Falhou |Passou |15:20|
+| FA004 | Frete Limite Sup | [x] | Passou/Falhou |Passou |15:23|
+| FA005 | Frete Grátis | [x] | Passou/Falhou |Passou |15:34|
+| FA006 | Frete Zero | [x] | Passou/Falhou |Passou |15:43|
+| FA007 | Nota Completa | [x] | Passou/Falhou |Passou |15:51|
+| FA008 | Nota Inexistente | [x] | Passou/Falhou |Passou |15:56|
+| FA009 | Nota Frete Grátis | [x] | Passou/Falhou |Passou |16:00|
+| FA010 | Formatação | [x] | Passou/Falhou |Passou |16:05|
 
 ## 📊 Relatório de Execução - Integração Final
 <!-- A ser preenchido -->
 
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
-| IF001 | Fluxo Completo | [ ] | Passou/Falhou | | |
-| IF002 | Múltiplas Vendas | [ ] | Passou/Falhou | | |
-| IF003 | Controle Estoque | [ ] | Passou/Falhou | | |
-| IF004 | Exclusão Reversões | [ ] | Passou/Falhou | | |
-| IF005 | Cenário Complexo | [ ] | Passou/Falhou | | |
-| IF006 | Limites Sistema | [ ] | Passou/Falhou | | |
-| IF007 | Recuperação Erros | [ ] | Passou/Falhou | | |
+| IF001 | Fluxo Completo | [x] | Passou/Falhou |Falhou|16:10|
+| IF002 | Múltiplas Vendas | [x] | Passou/Falhou |Passou|16:32|
+| IF003 | Controle Estoque | [x] | Passou/Falhou |Passou|16:34|
+| IF004 | Exclusão Reversões | [x] | Passou/Falhou |Passou|16:38|
+| IF005 | Cenário Complexo | [x] | Passou/Falhou |Falhou|16:48|
+| IF006 | Limites Sistema | [x] | Passou/Falhou |Passou|16:53|
+| IF007 | Recuperação Erros | [x] | Passou/Falhou | Passou|16:58 |
 
 ## 📈 Métricas Consolidadas do Projeto
 
