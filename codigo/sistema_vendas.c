@@ -1031,6 +1031,133 @@ void excluir_venda() {
     pausar();
 }
 
+void emitir_nota_fiscal() {
+    int codigo, indice;
+    
+    printf("\n=== EMITIR NOTA FISCAL ===\n");
+    printf("Digite o código da venda: ");
+    scanf("%d", &codigo);
+    limpar_buffer();
+
+    // Buscar venda pelo código
+    indice = buscar_venda_por_codigo(codigo);
+    if (indice == -1) {
+        printf("Venda não encontrada!\n");
+        pausar();
+        return;
+    }
+
+    // Obter referências para facilitar acesso aos dados
+    Venda *venda = &vendas[indice];
+    Comprador *comprador = &compradores[venda->codigo_comprador];
+    float frete = calcular_frete(venda->valor_total);
+    float total_com_frete = venda->valor_total + frete;
+
+    printf("\n");
+    printf("===========================================\n");
+    printf("               NOTA FISCAL                 \n");
+    printf("===========================================\n");
+    printf("Código da venda: %d\n", venda->codigo_venda);
+    printf("\nDADOS DO COMPRADOR:\n");
+    printf("Nome: %s\n", comprador->nome);
+    printf("CPF: %s\n", comprador->cpf);
+    printf("E-mail: %s\n", comprador->email);
+    printf("Endereço de entrega:\n");
+    printf("%s, %s\n", comprador->endereco.rua, comprador->endereco.bairro);
+    printf("%s - %s\n", comprador->endereco.cidade, comprador->endereco.estado);
+    printf("CEP: %s\n", comprador->endereco.cep);
+    
+    printf("\nPRODUTOS VENDIDOS:\n");
+    printf("%-30s %-6s %-10s %-12s\n", "Produto", "Qtd", "Preço Unit", "Total");
+    printf("-----------------------------------------------------------\n");
+    
+    for (int i = 0; i < venda->num_itens; i++) {
+        printf("%-30s %-6d R$ %-8.2f R$ %-9.2f\n",
+               venda->itens[i].nome_produto,
+               venda->itens[i].quantidade,
+               venda->itens[i].preco_unitario,
+               venda->itens[i].preco_total);
+    }
+    
+    printf("-----------------------------------------------------------\n");
+    printf("Subtotal: R$ %.2f\n", venda->valor_total);
+    
+    if (frete > 0) {
+        printf("Frete: R$ %.2f\n", frete);
+    } else {
+        printf("Frete: GRÁTIS\n");
+    }
+    
+    printf("TOTAL GERAL: R$ %.2f\n", total_com_frete);
+    printf("===========================================\n");
+    
+    pausar();
+}
+
+void menu_vendas() {
+    int opcao;
+    
+    do {
+        system("cls");  // Limpar tela (Windows)
+        printf("=== MENU VENDAS ===\n");
+        printf("1 - Cadastrar venda\n");      // GUSTAVO: Integração completa
+        printf("2 - Consultar vendas\n");     // GUSTAVO: Relatórios
+        printf("3 - Alterar venda\n");        // GUSTAVO: Alteração
+        printf("4 - Excluir venda\n");        // GUSTAVO: Exclusão com reversão
+        printf("0 - Voltar ao menu principal\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+        limpar_buffer();
+
+        switch (opcao) {
+            case 1: cadastrar_venda(); break;
+            case 2: consultar_vendas(); break;
+            case 3: alterar_venda(); break;
+            case 4: excluir_venda(); break;
+            case 0: break;
+            default: 
+                printf("Opção inválida!\n");
+                pausar();
+                break;
+        }
+    } while (opcao != 0);
+}
+
+void menu_principal() {
+    int opcao;
+    
+    do {
+        system("cls");
+        printf("========================================\n");
+        printf("       SISTEMA DE VENDAS v1.0          \n");
+        printf("========================================\n");
+        printf("1 - Gerenciar Produtos\n");        // LUCAS: Acessa menu_produtos()
+        printf("2 - Gerenciar Vendedores\n");      // DANIEL: Acessa menu_vendedores()
+        printf("3 - Gerenciar Compradores\n");     // GUILHERME: Acessa menu_compradores()
+        printf("4 - Gerenciar Vendas\n");          // GUSTAVO: Acessa menu_vendas()
+        printf("5 - Emitir Nota Fiscal\n");        // GUSTAVO: Relatório integrado
+        printf("0 - SAIR\n");
+        printf("========================================\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+        limpar_buffer();
+
+        switch (opcao) {
+            case 1: menu_produtos(); break;         // LUCAS: Módulo produtos
+            case 2: menu_vendedores(); break;       // DANIEL: Módulo vendedores
+            case 3: menu_compradores(); break;      // GUILHERME: Módulo compradores
+            case 4: menu_vendas(); break;           // GUSTAVO: Módulo vendas
+            case 5: emitir_nota_fiscal(); break;    // GUSTAVO: Nota fiscal
+            case 0: 
+                printf("Encerrando sistema...\n");
+                break;
+            default: 
+                printf("Opção inválida!\n");
+                pausar();
+                break;
+        }
+    } while (opcao != 0);
+}
 
 int main() {
     printf("Inicializando Sistema de Vendas...\n");

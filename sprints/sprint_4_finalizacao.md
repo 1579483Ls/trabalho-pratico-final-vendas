@@ -1,7 +1,7 @@
 # Sprint 4 - Finalização e Integração
 **Duração**: 3-4 dias  
 **Responsável**: Gustavo (com apoio da equipe)  
-**Data Início**: [A definir]  
+**Data Início**: 02/07/25 (12:37) 
 **Data Fim**: [A definir]  
 
 ## 🎯 Objetivo da Sprint
