@@ -16,12 +16,12 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 4. **Como** administrador, **eu quero** excluir produtos **para** remover itens descontinuados
 
 ### Tarefas Técnicas
-- [ ] **T001**: Documentar assinatura da função `buscar_produto_por_codigo()`
+- [x] **T001**: Documentar assinatura da função `buscar_produto_por_codigo()`
 - [X] **T002**: Documentar assinatura da função `cadastrar_produto()`
 - [X] **T003**: Documentar assinatura da função `consultar_produtos()`
 - [x] **T004**: Documentar assinatura da função `alterar_produto()`
-- [ ] **T005**: Documentar assinatura da função `excluir_produto()`
-- [ ] **T006**: Implementar casos de sucesso para todas as funções
+- [x] **T005**: Documentar assinatura da função `excluir_produto()`
+- [x] **T006**: Implementar casos de sucesso para todas as funções
 - [ ] **T007**: Definir casos de teste para o módulo
 - [ ] **T008**: Executar todos os casos de teste
 - [ ] **T009**: Implementar tratamento de exceções
@@ -240,8 +240,8 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
 | CT001 | Cadastrar Produto - Código Automático | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:57] |
-| CT002 | Cadastrar Produto - Código Automático | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:40] |
-| CT003 | Código Duplicado | [ ] | Passou/Falhou | | |
+| CT002 | Cadastrar Produto - Código Manual | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:40] |
+| CT003 | Código Duplicado | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:10] | |
 | CT004 | Buscar Produto Existente | [ ] | Passou/Falhou | | |
 | CT005 | Buscar Produto Inexistente | [ ] | Passou/Falhou | | |
 | CT006 | Consultar Lista Vazia | [ ] | Passou/Falhou | | |
@@ -256,8 +256,8 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 
 ## 📈 Métricas da Sprint
 - **Total de Casos de Teste**: 14
-- **Casos Executados**: [2]
-- **Casos que Passaram**: [2]
+- **Casos Executados**: [3]
+- **Casos que Passaram**: [3]
 - **Casos que Falharam**: [0]
 - **Taxa de Sucesso**: [100%]
 
@@ -265,7 +265,7 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 <!-- Documentar problemas encontrados durante os testes -->
 
 ## ✅ Definition of Done
-- [ ] Todas as funções implementadas
+- [x] Todas as funções implementadas
 - [ ] Documentação completa
 - [ ] Casos de teste definidos
 - [ ] Todos os testes executados
