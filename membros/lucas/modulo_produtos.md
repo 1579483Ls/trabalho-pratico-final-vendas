@@ -8,16 +8,16 @@
 ## 📋 Tarefas da Sprint 1
 
 ### 1. Documentação das Funções
-- [ ] `buscar_produto_por_codigo()`
+- [x] `buscar_produto_por_codigo()`
 - [X] `cadastrar_produto()`
 - [X] `consultar_produtos()`
 - [x] `alterar_produto()`
-- [ ] `excluir_produto()`
+- [x] `excluir_produto()`
 
 ### 2. Implementação
-- [ ] Casos de sucesso
-- [ ] Tratamento de erros
-- [ ] Validações
+- [X] Casos de sucesso
+- [X] Tratamento de erros
+- [X] Validações
 
 ### 3. Testes
 - [ ] Definir casos de teste
@@ -27,7 +27,7 @@
 ## 📚 Funções a Implementar
 
 ### `int buscar_produto_por_codigo(int codigo)`
-**Status**: 
+**Status**: ✅ Implementado
 **Descrição**: Busca produto pelo código  
 **Entrada**: Código do produto  
 **Saída**: Índice no array ou -1  
@@ -53,7 +53,7 @@
 **Não permite**: Código
 
 ### `void excluir_produto()`
-**Status**:   
+**Status**: ✅ Implementado   
 **Descrição**: Remove produto (exclusão lógica)  
 **Confirmação**: Sim/Não
 
@@ -63,12 +63,19 @@
 | Caso de Teste | Status | Resultado | Observações |
 |---------------|--------|-----------|-------------|
 | CT001 | [X] | [X] Passou / [ ] Falhou | |
-| CT002 | [x] | [x] Passou / [ ] Falhou | |
+| CT002 | [X] | [X] Passou / [ ] Falhou | |
 | CT003 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT004 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT005 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT006 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT007 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT008 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT009 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT010 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT011 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT012 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT013 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT014 | [ ] | [ ] Passou / [ ] Falhou | |
 
 ## 📝 Notas de Implementação
 <!-- Adicionar observações durante o desenvolvimento -->

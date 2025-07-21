@@ -47,6 +47,19 @@ typedef struct {
 
 ## 📦 Módulo de Produtos (Lucas)
 
+### `int buscar_produto_por_codigo(int codigo)`
+**Propósito**: Localiza um produto pelo código  
+
+**Parâmetros de Entrada**: 
+- `codigo`: Código do produto a ser buscado
+
+**Parâmetros de Saída**: 
+- Retorna o índice do produto no array ou -1 se não encontrado (Produto não encontrado!)
+
+**Responsabilidade**: Lucas
+
+---
+
 ### `void cadastrar_produto()`
 **Propósito**: Adiciona um novo produto ao sistema  
 
@@ -96,6 +109,22 @@ typedef struct {
 - Validação de existência
 
 **Responsabilidade**: Lucas
+
+### `void excluir_produto()`
+**Propósito**: Remove um produto do sistema (exclusão lógica)
+
+**Parâmetros de Entrada**: Solicita código do produto ao usuário.
+
+**Parâmetros de Saída**: (Produto não encontrado!) caso não seja um codigo ativo, mensagem de confirmação de exclusão (Confirma exclusão? (s/n):), (Produto excluído com sucesso!) caso selecione a opção (s) e caso a opção (n) (Exclusão cancelada).
+
+**Funcionalidades**:
+- Busca por código
+- Confirmação de exclusão
+- Exclusão lógica (ativo = 0)
+
+**Responsabilidade**: Lucas
+
+---
 
 ## 👥 Módulo de Vendedores (Daniel)
 
