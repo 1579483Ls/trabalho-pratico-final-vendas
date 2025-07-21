@@ -242,10 +242,10 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 | CT001 | Cadastrar Produto - Código Automático | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:57] |
 | CT002 | Cadastrar Produto - Código Manual | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:40] |
 | CT003 | Código Duplicado | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:10] | |
-| CT004 | Buscar Produto Existente | [ ] | Passou/Falhou | | |
-| CT005 | Buscar Produto Inexistente | [ ] | Passou/Falhou | | |
-| CT006 | Consultar Lista Vazia | [ ] | Passou/Falhou | | |
-| CT007 | Consultar Lista Preenchida | [ ] | Passou/Falhou | | |
+| CT004 | Buscar Produto Existente | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:11] | |
+| CT005 | Buscar Produto Inexistente | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:12] | |
+| CT006 | Consultar Lista Vazia | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:15] | |
+| CT007 | Consultar Lista Preenchida | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:17] | |
 | CT008 | Alterar Nome | [ ] | Passou/Falhou | | |
 | CT009 | Alterar Estoque | [ ] | Passou/Falhou | | |
 | CT010 | Alterar Preço | [ ] | Passou/Falhou | | |
@@ -256,8 +256,8 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 
 ## 📈 Métricas da Sprint
 - **Total de Casos de Teste**: 14
-- **Casos Executados**: [3]
-- **Casos que Passaram**: [3]
+- **Casos Executados**: [7]
+- **Casos que Passaram**: [7]
 - **Casos que Falharam**: [0]
 - **Taxa de Sucesso**: [100%]
 
