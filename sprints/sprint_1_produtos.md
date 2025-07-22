@@ -239,25 +239,25 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 
 | ID | Caso de Teste | Status | Resultado | Data/Hora | Observações |
 |----|---------------|--------|-----------|-----------|-------------|
-| CT001 | Cadastrar Produto - Código Automático | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:57] |
-| CT002 | Cadastrar Produto - Código Manual | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:40] |
+| CT001 | Cadastrar Produto - Código Automático | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:57] | |
+| CT002 | Cadastrar Produto - Código Manual | [X] | Passou/Falhou [PASSOU] | [21/06 - 14:40] | |
 | CT003 | Código Duplicado | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:10] | |
 | CT004 | Buscar Produto Existente | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:11] | |
 | CT005 | Buscar Produto Inexistente | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:12] | |
 | CT006 | Consultar Lista Vazia | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:15] | |
 | CT007 | Consultar Lista Preenchida | [X] | Passou/Falhou [PASSOU] | [21/06 - 15:17] | |
-| CT008 | Alterar Nome | [ ] | Passou/Falhou | | |
-| CT009 | Alterar Estoque | [ ] | Passou/Falhou | | |
-| CT010 | Alterar Preço | [ ] | Passou/Falhou | | |
-| CT011 | Alterar Produto Inexistente | [ ] | Passou/Falhou | | |
+| CT008 | Alterar Nome | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:17] | |
+| CT009 | Alterar Estoque | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:22] | |
+| CT010 | Alterar Preço | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:27] | |
+| CT011 | Alterar Produto Inexistente | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:32] | |
 | CT012 | Excluir com Confirmação | [ ] | Passou/Falhou | | |
 | CT013 | Excluir sem Confirmação | [ ] | Passou/Falhou | | |
 | CT014 | Limite Máximo | [ ] | Passou/Falhou | | |
 
 ## 📈 Métricas da Sprint
 - **Total de Casos de Teste**: 14
-- **Casos Executados**: [7]
-- **Casos que Passaram**: [7]
+- **Casos Executados**: [11]
+- **Casos que Passaram**: [11]
 - **Casos que Falharam**: [0]
 - **Taxa de Sucesso**: [100%]
 
