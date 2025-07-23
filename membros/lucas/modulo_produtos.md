@@ -8,11 +8,11 @@
 ## 📋 Tarefas da Sprint 1
 
 ### 1. Documentação das Funções
-- [ ] `buscar_produto_por_codigo()`
+- [x] `buscar_produto_por_codigo()`
 - [X] `cadastrar_produto()`
 - [X] `consultar_produtos()`
 - [x] `alterar_produto()`
-- [ ] `excluir_produto()`
+- [x] `excluir_produto()`
 
 ### 2. Implementação
 - [ ] Casos de sucesso
@@ -27,7 +27,7 @@
 ## 📚 Funções a Implementar
 
 ### `int buscar_produto_por_codigo(int codigo)`
-**Status**: 
+**Status**: ✅ Implementado
 **Descrição**: Busca produto pelo código  
 **Entrada**: Código do produto  
 **Saída**: Índice no array ou -1  
@@ -53,7 +53,7 @@
 **Não permite**: Código
 
 ### `void excluir_produto()`
-**Status**:   
+**Status**: ✅ Implementado   
 **Descrição**: Remove produto (exclusão lógica)  
 **Confirmação**: Sim/Não
 
