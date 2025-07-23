@@ -66,12 +66,14 @@ void menu_produtos() {
     
     do {
         system("cls");
+        printf("=======================================\n");
         printf("=== MENU PRODUTOS ===\n");
         printf("1 - Cadastrar produto\n");
         printf("2 - Consultar produtos\n");
         printf("3 - Alterar produto\n");
         printf("4 - Excluir produto\n");
         printf("0 - Sair\n");
+        printf("=======================================\n");
         printf("Escolha: ");
         scanf("%d", &opcao);
         limpar_buffer();
@@ -80,10 +82,7 @@ void menu_produtos() {
             case 1: cadastrar_produto(); break;
             case 2: consultar_produtos(); break;
             case 3: alterar_produto(); break;
-            case 4: 
-                printf("Exclusão em desenvolvimento!\n");
-                pausar();
-                break;
+            case 4: excluir_produto(); break;     
             case 0: break;
             default: 
                 printf("Opção inválida!\n");
@@ -224,10 +223,50 @@ void alterar_produto() {
     pausar();
 }
 
+void excluir_produto() {
+    int codigo, indice;
+    
+    printf("\n=== EXCLUIR PRODUTO ===\n");
+    printf("Digite o código do produto: ");
+    scanf("%d", &codigo);
+    limpar_buffer();
+
+    indice = buscar_produto_por_codigo(codigo);
+    if (indice == -1) {
+        printf("Produto não encontrado!\n");
+        pausar();
+        return;
+    }
+
+    printf("Produto: %s\n", produtos[indice].nome);
+    printf("Confirma exclusão? (s/n): ");
+    
+    char confirmacao;
+    scanf("%c", &confirmacao);
+    limpar_buffer();
+
+    if (tolower(confirmacao) == 's') {
+        produtos[indice].ativo = 0;
+        printf("Produto excluído com sucesso!\n");
+    } else {
+        printf("Exclusão cancelada.\n");
+    }
+    pausar();
+}
+
 int main() {
     setlocale(LC_ALL, "Portuguese");
-    printf("Módulo de Produtos - Lucas Siqueira\n");
+    
+    printf("=======================================\n");
+    printf("  SISTEMA DE VENDAS - MÓDULO PRODUTOS\n");
+    printf("  Responsável: Lucas Siqueira\n");
+    printf("  Sprint 1 - Implementação CRUD\n");
+    printf("=======================================\n");
+    printf("Pressione Enter para continuar...");
     getchar();
+    
     menu_produtos();
+    
+    printf("\nObrigado por usar o sistema!\n");
     return 0;
 }
