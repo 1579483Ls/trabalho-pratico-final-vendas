@@ -16,11 +16,11 @@
 
 ### 2. Implementação
 - [X] Casos de sucesso
-- [X] Tratamento de erros
-- [X] Validações
+- [ ] Tratamento de erros
+- [ ] Validações
 
 ### 3. Testes
-- [ ] Definir casos de teste
+- [x] Definir casos de teste
 - [ ] Executar testes
 - [ ] Documentar resultados
 
@@ -64,18 +64,18 @@
 |---------------|--------|-----------|-------------|
 | CT001 | [X] | [X] Passou / [ ] Falhou | |
 | CT002 | [X] | [X] Passou / [ ] Falhou | |
-| CT003 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT004 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT005 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT006 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT007 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT008 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT009 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT010 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT011 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT012 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT013 | [ ] | [ ] Passou / [ ] Falhou | |
-| CT014 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT003 | [X] | [X] Passou / [ ] Falhou | |
+| CT004 | [X] | [X] Passou / [ ] Falhou | |
+| CT005 | [X] | [X] Passou / [ ] Falhou | |
+| CT006 | [X] | [X] Passou / [ ] Falhou | |
+| CT007 | [X] | [X] Passou / [ ] Falhou | |
+| CT008 | [x] | [x] Passou / [ ] Falhou | |
+| CT009 | [x] | [x] Passou / [ ] Falhou | |
+| CT010 | [x] | [x] Passou / [ ] Falhou | |
+| CT011 | [x] | [x] Passou / [ ] Falhou | |
+| CT012 | [x] | [x] Passou / [ ] Falhou | |
+| CT013 | [x] | [x] Passou / [ ] Falhou | |
+| CT014 | [x] | [x] Passou / [ ] Falhou | |
 
 ## 📝 Notas de Implementação
 <!-- Adicionar observações durante o desenvolvimento -->
