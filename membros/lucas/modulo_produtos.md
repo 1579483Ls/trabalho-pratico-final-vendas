@@ -15,9 +15,9 @@
 - [x] `excluir_produto()`
 
 ### 2. Implementação
-- [ ] Casos de sucesso
-- [ ] Tratamento de erros
-- [ ] Validações
+- [X] Casos de sucesso
+- [X] Tratamento de erros
+- [X] Validações
 
 ### 3. Testes
 - [ ] Definir casos de teste
@@ -63,12 +63,19 @@
 | Caso de Teste | Status | Resultado | Observações |
 |---------------|--------|-----------|-------------|
 | CT001 | [X] | [X] Passou / [ ] Falhou | |
-| CT002 | [x] | [x] Passou / [ ] Falhou | |
+| CT002 | [X] | [X] Passou / [ ] Falhou | |
 | CT003 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT004 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT005 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT006 | [ ] | [ ] Passou / [ ] Falhou | |
 | CT007 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT008 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT009 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT010 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT011 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT012 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT013 | [ ] | [ ] Passou / [ ] Falhou | |
+| CT014 | [ ] | [ ] Passou / [ ] Falhou | |
 
 ## 📝 Notas de Implementação
 <!-- Adicionar observações durante o desenvolvimento -->
