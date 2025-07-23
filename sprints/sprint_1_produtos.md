@@ -2,7 +2,7 @@
 **Duração**: 3-4 dias  
 **Responsável**: Lucas Siqueira  
 **Data Início**: 21/06/2025 
-**Data Fim**: [A definir]  
+**Data Fim**:   
 
 ## 🎯 Objetivo da Sprint
 Implementar e testar completamente o módulo de gerenciamento de produtos do sistema de vendas.
@@ -23,10 +23,10 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 - [x] **T005**: Documentar assinatura da função `excluir_produto()`
 - [x] **T006**: Implementar casos de sucesso para todas as funções
 - [ ] **T007**: Definir casos de teste para o módulo
-- [ ] **T008**: Executar todos os casos de teste
+- [x] **T008**: Executar todos os casos de teste
 - [ ] **T009**: Implementar tratamento de exceções
 - [ ] **T010**: Re-executar testes após implementação de exceções
-- [ ] **T011**: Gerar relatório de execução de testes
+- [x] **T011**: Gerar relatório de execução de testes
 
 ## 📚 Documentação de Funções
 
@@ -250,14 +250,14 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 | CT009 | Alterar Estoque | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:22] | |
 | CT010 | Alterar Preço | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:27] | |
 | CT011 | Alterar Produto Inexistente | [X] | Passou/Falhou [PASSOU] | [22/06 - 14:32] | |
-| CT012 | Excluir com Confirmação | [ ] | Passou/Falhou | | |
-| CT013 | Excluir sem Confirmação | [ ] | Passou/Falhou | | |
-| CT014 | Limite Máximo | [ ] | Passou/Falhou | | |
+| CT012 | Excluir com Confirmação | [X] | Passou/Falhou [PASSOU] | [23/07 - 11:10] | |
+| CT013 | Excluir sem Confirmação | [X] | Passou/Falhou [PASSOU] | [23/07 - 11:15] | |
+| CT014 | Limite Máximo | [X] | Passou/Falhou [PASSOU] | [23/07 - 11:20] | |
 
 ## 📈 Métricas da Sprint
 - **Total de Casos de Teste**: 14
-- **Casos Executados**: [11]
-- **Casos que Passaram**: [11]
+- **Casos Executados**: [14]
+- **Casos que Passaram**: [14]
 - **Casos que Falharam**: [0]
 - **Taxa de Sucesso**: [100%]
 
@@ -267,9 +267,9 @@ Implementar e testar completamente o módulo de gerenciamento de produtos do sis
 ## ✅ Definition of Done
 - [x] Todas as funções implementadas
 - [ ] Documentação completa
-- [ ] Casos de teste definidos
-- [ ] Todos os testes executados
-- [ ] Relatório de testes gerado
+- [x] Casos de teste definidos
+- [x] Todos os testes executados
+- [x] Relatório de testes gerado
 - [ ] Bugs críticos corrigidos
 
 ## 📝 Retrospectiva da Sprint
